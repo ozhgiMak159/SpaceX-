@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		B5FFB64827EC9A450062A245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FFB64727EC9A450062A245 /* AppDelegate.swift */; };
 		B5FFB64A27EC9A450062A245 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FFB64927EC9A450062A245 /* SceneDelegate.swift */; };
-		B5FFB64C27EC9A450062A245 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FFB64B27EC9A450062A245 /* ViewController.swift */; };
 		B5FFB64F27EC9A450062A245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5FFB64D27EC9A450062A245 /* Main.storyboard */; };
 		B5FFB65127EC9A460062A245 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5FFB65027EC9A460062A245 /* Assets.xcassets */; };
 		B5FFB65427EC9A460062A245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5FFB65227EC9A460062A245 /* LaunchScreen.storyboard */; };
+		B5FFB66127EC9D050062A245 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FFB66027EC9D050062A245 /* NetworkManager.swift */; };
+		B5FFB66327EC9D310062A245 /* Rockets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FFB66227EC9D310062A245 /* Rockets.swift */; };
+		B5FFB66527EC9D4D0062A245 /* RocketLaunches.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FFB66427EC9D4D0062A245 /* RocketLaunches.swift */; };
+		B5FFB66727EC9DF50062A245 /* InfoRocketLaunchCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FFB66627EC9DF50062A245 /* InfoRocketLaunchCollectionViewController.swift */; };
+		B5FFB66927EC9EB40062A245 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FFB66827EC9EB40062A245 /* MainViewController.swift */; };
+		B5FFB66B27EC9EC30062A245 /* DetailInfoRocketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FFB66A27EC9EC30062A245 /* DetailInfoRocketCollectionViewCell.swift */; };
+		B5FFB66D27EC9ECB0062A245 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FFB66C27EC9ECB0062A245 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B5FFB64427EC9A450062A245 /* SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FFB64727EC9A450062A245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5FFB64927EC9A450062A245 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B5FFB64B27EC9A450062A245 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B5FFB64E27EC9A450062A245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5FFB65027EC9A460062A245 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5FFB65327EC9A460062A245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5FFB65527EC9A460062A245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5FFB66027EC9D050062A245 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B5FFB66227EC9D310062A245 /* Rockets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rockets.swift; sourceTree = "<group>"; };
+		B5FFB66427EC9D4D0062A245 /* RocketLaunches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLaunches.swift; sourceTree = "<group>"; };
+		B5FFB66627EC9DF50062A245 /* InfoRocketLaunchCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoRocketLaunchCollectionViewController.swift; sourceTree = "<group>"; };
+		B5FFB66827EC9EB40062A245 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B5FFB66A27EC9EC30062A245 /* DetailInfoRocketCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInfoRocketCollectionViewCell.swift; sourceTree = "<group>"; };
+		B5FFB66C27EC9ECB0062A245 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,61 @@
 		B5FFB64627EC9A450062A245 /* SpaceX */ = {
 			isa = PBXGroup;
 			children = (
-				B5FFB64727EC9A450062A245 /* AppDelegate.swift */,
-				B5FFB64927EC9A450062A245 /* SceneDelegate.swift */,
-				B5FFB64B27EC9A450062A245 /* ViewController.swift */,
-				B5FFB64D27EC9A450062A245 /* Main.storyboard */,
-				B5FFB65027EC9A460062A245 /* Assets.xcassets */,
-				B5FFB65227EC9A460062A245 /* LaunchScreen.storyboard */,
+				B5FFB65D27EC9C570062A245 /* Services */,
+				B5FFB65E27EC9C960062A245 /* Models */,
+				B5FFB65F27EC9CB20062A245 /* ViewControllers */,
+				B5FFB65C27EC9C2A0062A245 /* StoryBoards */,
+				B5FFB65B27EC9C170062A245 /* App */,
 				B5FFB65527EC9A460062A245 /* Info.plist */,
 			);
 			path = SpaceX;
+			sourceTree = "<group>";
+		};
+		B5FFB65B27EC9C170062A245 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B5FFB65027EC9A460062A245 /* Assets.xcassets */,
+				B5FFB64927EC9A450062A245 /* SceneDelegate.swift */,
+				B5FFB64727EC9A450062A245 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B5FFB65C27EC9C2A0062A245 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				B5FFB64D27EC9A450062A245 /* Main.storyboard */,
+				B5FFB65227EC9A460062A245 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		B5FFB65D27EC9C570062A245 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B5FFB66027EC9D050062A245 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B5FFB65E27EC9C960062A245 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B5FFB66227EC9D310062A245 /* Rockets.swift */,
+				B5FFB66427EC9D4D0062A245 /* RocketLaunches.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B5FFB65F27EC9CB20062A245 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B5FFB66827EC9EB40062A245 /* MainViewController.swift */,
+				B5FFB66627EC9DF50062A245 /* InfoRocketLaunchCollectionViewController.swift */,
+				B5FFB66A27EC9EC30062A245 /* DetailInfoRocketCollectionViewCell.swift */,
+				B5FFB66C27EC9ECB0062A245 /* SettingsViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +196,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5FFB64C27EC9A450062A245 /* ViewController.swift in Sources */,
+				B5FFB66927EC9EB40062A245 /* MainViewController.swift in Sources */,
+				B5FFB66B27EC9EC30062A245 /* DetailInfoRocketCollectionViewCell.swift in Sources */,
+				B5FFB66127EC9D050062A245 /* NetworkManager.swift in Sources */,
+				B5FFB66527EC9D4D0062A245 /* RocketLaunches.swift in Sources */,
 				B5FFB64827EC9A450062A245 /* AppDelegate.swift in Sources */,
+				B5FFB66727EC9DF50062A245 /* InfoRocketLaunchCollectionViewController.swift in Sources */,
 				B5FFB64A27EC9A450062A245 /* SceneDelegate.swift in Sources */,
+				B5FFB66327EC9D310062A245 /* Rockets.swift in Sources */,
+				B5FFB66D27EC9ECB0062A245 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

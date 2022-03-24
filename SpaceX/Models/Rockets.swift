@@ -1,0 +1,56 @@
+//
+//  Rockets.swift
+//  SpaceX
+//
+//  Created by Maksim  on 24.03.2022.
+//
+
+
+struct ListRockets: Decodable {
+    let height: Height //(+)
+    let diameter: Diameter //(+)
+    let mass: Mass //(+)
+    let payload_weights: [PayloadWeights] //(+)
+   // let flickr_images: [ImageRocket]
+    let name: String //(+)
+    let stages: Int
+    let country: String //(+)
+    let first_stage: First //(+)
+    let second_stage: Second //(+)
+    let cost_per_launch: Double //(+)
+    
+}
+
+struct Height: Decodable {
+    let meters: Double
+    let feet: Double
+}
+
+struct Diameter: Decodable {
+    let meters: Double
+    let feet: Double
+}
+
+struct Mass: Decodable {
+    let kg: Double
+    let lb: Double
+}
+
+struct PayloadWeights: Decodable {
+    let kg: Double
+    let lb: Double
+}
+
+struct First: Decodable {
+    let engines: Int
+    let fuel_amount_tons: Double
+    let burn_time_sec: Int?
+}
+
+struct Second: Decodable {
+    let engines: Int
+    let fuel_amount_tons: Double
+    let burn_time_sec: Int?
+}
+
+
