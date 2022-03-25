@@ -676,6 +676,19 @@
                     </view>
                     <navigationItem key="navigationItem" id="2lT-HW-pWp"/>
                     <size key="freeformSize" width="320" height="1307"/>
+                    <connections>
+                        <outlet property="CombustionTimeFirst" destination="x6d-zk-8CR" id="Wjz-wI-BBS"/>
+                        <outlet property="comdustionTimeSecond" destination="ESs-1K-G71" id="dUm-Rs-kfe"/>
+                        <outlet property="country" destination="uan-wz-ZRh" id="WAy-Ar-nAj"/>
+                        <outlet property="firstLaunch" destination="00V-lM-YQo" id="u8V-75-QPc"/>
+                        <outlet property="fuelQuantityFirst" destination="guR-qy-lc6" id="YW1-ZF-Ikx"/>
+                        <outlet property="fuelQuantitySecond" destination="aai-9e-Zpy" id="8U1-nb-Ol1"/>
+                        <outlet property="imageRocket" destination="vwc-iO-4QU" id="MiC-3w-66P"/>
+                        <outlet property="launchCost" destination="2t4-C7-NOv" id="ZnK-Dt-Kgc"/>
+                        <outlet property="nameRocket" destination="pac-pr-f7m" id="8aK-sA-YAx"/>
+                        <outlet property="numberOfEngines" destination="YKP-Gt-8Uy" id="MXu-5u-nvm"/>
+                        <outlet property="numberOfEnginesSecond" destination="fgP-Hb-Ubi" id="4bZ-mN-tUl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sT1-IM-t4w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

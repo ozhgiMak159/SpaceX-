@@ -5,4 +5,8 @@
 //  Created by Maksim  on 24.03.2022.
 //
 
-import Foundation
+
+struct RocketLaunches: Decodable {
+    let name: String
+    let date_utc: String
+}

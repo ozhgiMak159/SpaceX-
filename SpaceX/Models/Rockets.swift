@@ -11,9 +11,7 @@ struct ListRockets: Decodable {
     let diameter: Diameter //(+)
     let mass: Mass //(+)
     let payload_weights: [PayloadWeights] //(+)
-   // let flickr_images: [ImageRocket]
     let name: String //(+)
-    let stages: Int
     let country: String //(+)
     let first_stage: First //(+)
     let second_stage: Second //(+)
@@ -22,34 +20,34 @@ struct ListRockets: Decodable {
 }
 
 struct Height: Decodable {
-    let meters: Double
-    let feet: Double
+    let meters: Double?
+    let feet: Double?
 }
 
 struct Diameter: Decodable {
-    let meters: Double
-    let feet: Double
+    let meters: Double?
+    let feet: Double?
 }
 
 struct Mass: Decodable {
-    let kg: Double
-    let lb: Double
+    let kg: Double?
+    let lb: Double?
 }
 
 struct PayloadWeights: Decodable {
-    let kg: Double
-    let lb: Double
+    let kg: Double?
+    let lb: Double?
 }
 
 struct First: Decodable {
-    let engines: Int
-    let fuel_amount_tons: Double
+    let engines: Int?
+    let fuel_amount_tons: Double?
     let burn_time_sec: Int?
 }
 
 struct Second: Decodable {
-    let engines: Int
-    let fuel_amount_tons: Double
+    let engines: Int?
+    let fuel_amount_tons: Double?
     let burn_time_sec: Int?
 }
 
