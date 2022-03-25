@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5C542AC27ED999400B668B8 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C542AB27ED999400B668B8 /* PageViewController.swift */; };
 		B5FFB64827EC9A450062A245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FFB64727EC9A450062A245 /* AppDelegate.swift */; };
 		B5FFB64A27EC9A450062A245 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FFB64927EC9A450062A245 /* SceneDelegate.swift */; };
 		B5FFB64F27EC9A450062A245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5FFB64D27EC9A450062A245 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B5C542AB27ED999400B668B8 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		B5FFB64427EC9A450062A245 /* SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FFB64727EC9A450062A245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5FFB64927EC9A450062A245 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				B5FFB66627EC9DF50062A245 /* InfoRocketLaunchCollectionViewController.swift */,
 				B5FFB66A27EC9EC30062A245 /* DetailInfoRocketCollectionViewCell.swift */,
 				B5FFB66C27EC9ECB0062A245 /* SettingsViewController.swift */,
+				B5C542AB27ED999400B668B8 /* PageViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5FFB66927EC9EB40062A245 /* MainViewController.swift in Sources */,
+				B5C542AC27ED999400B668B8 /* PageViewController.swift in Sources */,
 				B5FFB66B27EC9EC30062A245 /* DetailInfoRocketCollectionViewCell.swift in Sources */,
 				B5FFB66127EC9D050062A245 /* NetworkManager.swift in Sources */,
 				B5FFB66527EC9D4D0062A245 /* RocketLaunches.swift in Sources */,

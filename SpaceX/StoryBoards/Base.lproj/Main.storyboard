@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IQA-kt-3sq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iqL-e2-FDg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -14,35 +14,35 @@
             <objects>
                 <viewController extendedLayoutIncludesOpaqueBars="YES" id="m8g-1f-zZq" customClass="SettingsViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y2B-nF-a2d">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="rXK-Za-rDF">
-                                <rect key="frame" x="20.5" y="196" width="373" height="258"/>
+                                <rect key="frame" x="20.5" y="144.5" width="373" height="258"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="1Rx-5q-Yty">
                                         <rect key="frame" x="0.0" y="0.0" width="245" height="258"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Высота" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="53H-t9-bl8">
-                                                <rect key="frame" x="0.0" y="0.0" width="245" height="42.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="245" height="43"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Диаметр" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WHU-pR-i6J">
-                                                <rect key="frame" x="0.0" y="71.5" width="245" height="43"/>
+                                                <rect key="frame" x="0.0" y="72" width="245" height="42.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Масса" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9xO-fg-E9o">
-                                                <rect key="frame" x="0.0" y="143.5" width="245" height="42.5"/>
+                                                <rect key="frame" x="0.0" y="143.5" width="245" height="43"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Полезная нагрузка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1Fm-US-zmi">
-                                                <rect key="frame" x="0.0" y="215" width="245" height="43"/>
+                                                <rect key="frame" x="0.0" y="215.5" width="245" height="42.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -131,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wER-XW-pco" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2248.125" y="-194.36619718309859"/>
+            <point key="canvasLocation" x="2191" y="-196"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="634-At-b4k">
@@ -140,7 +140,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="QNV-at-3wR"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7e2-N7-bgL">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -157,7 +157,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="voe-kU-BDL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1380" y="-194.36619718309859"/>
+            <point key="canvasLocation" x="1268" y="-195"/>
         </scene>
         <!--Falcon Heavy-->
         <scene sceneID="mGJ-QP-h1W">
@@ -227,12 +227,20 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yNH-9b-WcN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="329" y="658"/>
+            <point key="canvasLocation" x="329" y="777"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="btu-Tm-O4X">
+            <objects>
+                <pageViewController storyboardIdentifier="PageVC" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="iqL-e2-FDg" customClass="PageViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2zs-E8-I4O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-639" y="-196"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="2dz-qN-ssr">
             <objects>
-                <viewController id="nwb-vn-H8c" customClass="MainViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainVC" id="nwb-vn-H8c" customClass="MainViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YKV-vu-Mrf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="1307"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -254,13 +262,13 @@
                                 <color key="currentPageIndicatorTintColor" systemColor="linkColor"/>
                             </pageControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l42-6d-F3X">
-                                <rect key="frame" x="0.0" y="15" width="320" height="1209"/>
+                                <rect key="frame" x="0.0" y="-29" width="320" height="1253"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ракетаТест" translatesAutoresizingMaskIntoConstraints="NO" id="vwc-iO-4QU">
                                         <rect key="frame" x="0.0" y="-26" width="320" height="800"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ll-3t-JD9">
-                                        <rect key="frame" x="0.0" y="424" width="320" height="835"/>
+                                        <rect key="frame" x="0.0" y="424" width="320" height="879"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="ueX-gZ-rn0">
                                                 <rect key="frame" x="8" y="51" width="304" height="59"/>
@@ -688,29 +696,13 @@
                         <outlet property="nameRocket" destination="pac-pr-f7m" id="8aK-sA-YAx"/>
                         <outlet property="numberOfEngines" destination="YKP-Gt-8Uy" id="MXu-5u-nvm"/>
                         <outlet property="numberOfEnginesSecond" destination="fgP-Hb-Ubi" id="4bZ-mN-tUl"/>
+                        <outlet property="pageControllerRocket" destination="KwF-NX-Boe" id="lFN-zj-cp2"/>
+                        <outlet property="scrollViewMain" destination="l42-6d-F3X" id="obh-hE-Xww"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sT1-IM-t4w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="330" y="-194.8943661971831"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="6aD-FH-lAk">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IQA-kt-3sq" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="5I8-5D-NlR">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="nwb-vn-H8c" kind="relationship" relationship="rootViewController" id="bTR-wd-qGk"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a5H-fL-q8A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-667.5" y="-195.42253521126761"/>
         </scene>
     </scenes>
     <resources>
