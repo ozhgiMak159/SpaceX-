@@ -14,7 +14,7 @@ class InfoRocketLaunchCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        NetworkManager.shered.fetchDataList(Link.rocketLaunches.rawValue)
+        
     }
 
   

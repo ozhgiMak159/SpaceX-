@@ -11,7 +11,6 @@ import UIKit
 class MainViewController: UIViewController {
 
     
-    
     @IBOutlet var pageControllerRocket: UIPageControl!
     @IBOutlet var scrollViewMain: UIScrollView!
     
@@ -34,35 +33,32 @@ class MainViewController: UIViewController {
     @IBOutlet var fuelQuantitySecond: UILabel!
     @IBOutlet var comdustionTimeSecond: UILabel!
     
-    var presentText = ""
-    var currentPage = 0
-    var numberOfPage = 0
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      //  fetchData(url: Link.listRocet.rawValue)
-        
-        nameRocket.text = presentText
-        pageControllerRocket.currentPage = currentPage
-        pageControllerRocket.numberOfPages = numberOfPage
+        fetchData(Link.listRocet.rawValue)
+    }
+    
+    
+ private func fetchData(_ url: String) {
+        NetworkManager.shered.fetchData(url) { list in
+            list.forEach { name in
+                self.nameRocket.text = name.name
+                self.country.text = name.country
+                self.launchCost.text = String(format: "%.0f", name.cost_per_launch)
+                self.numberOfEngines.text = String(name.first_stage.engines)
+                self.fuelQuantityFirst.text = String(format: "%.0f", name.first_stage.fuel_amount_tons ?? 0.0)
+                self.CombustionTimeFirst.text = String(name.first_stage.burn_time_sec ?? 0)
+                self.numberOfEnginesSecond.text = String(name.second_stage.engines)
+                self.fuelQuantitySecond.text = String(format: "%.0f", name.second_stage.fuel_amount_tons ?? 0.0)
+                self.comdustionTimeSecond.text = String(name.second_stage.burn_time_sec ?? 0)
+            }
+        }
     }
 
-    
-// private func fetchData(url: String) {
-//        NetworkManager.shered.fetchData(url) { roket in
-//            roket.forEach { i in
-//                self.nameRocket.text = i.name
-//            }
-//        }
-//    }
-
-    
-    
-    
-    
-    
-    
-    
-    
+ 
 }
+
+
 
