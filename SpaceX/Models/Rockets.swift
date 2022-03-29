@@ -13,6 +13,7 @@ struct ListRockets: Decodable {
     let payload_weights: [PayloadWeights] //(+)
     let name: String //(+)
     let country: String //(+)
+    let first_flight: String
     let first_stage: First //(+)
     let second_stage: Second //(+)
     let cost_per_launch: Double //(+)
