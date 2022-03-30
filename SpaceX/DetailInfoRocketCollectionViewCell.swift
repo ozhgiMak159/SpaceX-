@@ -15,12 +15,30 @@ class DetailInfoRocketCollectionViewCell: UICollectionViewCell {
     @IBOutlet var flightResultImage: UIImageView!
     
     
+    let formatter: DateFormatter = {
+        let dataForm = DateFormatter()
+        dataForm.locale = .current
+        dataForm.dateStyle = .medium
+        return dataForm
+    }()
+    
+
+    
+    
     func one(with data: RocketLaunches) {
+        
         nameRocket.text = data.name
-        flightDate.text = data.date_utc
+        //flightDate.text = formatter.string(from: data.dateUtc)
+        
+        if let data = data.success {
+            if data {
+                flightResultImage.image = UIImage(named: "True")
+            } else {
+                flightResultImage.image = UIImage(named: "False")
+            }
+        }
     }
     
     
-    
-    
 }
+

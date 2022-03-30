@@ -10,7 +10,12 @@ import UIKit
   class PageViewController: UIPageViewController {
 
 
-      
+      let formatter: DateFormatter = {
+          let dataForm = DateFormatter()
+          dataForm.locale = Locale(identifier: "ru_RU")
+          dataForm.dateFormat = "yyyy-MM-dd"
+          return dataForm
+      }()
       
       
       
@@ -39,6 +44,7 @@ import UIKit
               guard index >= 0 else { return }
               guard index < data.count else { return }
               mainVc.nameRocket.text = data[index].name
+            //  mainVc.firstLaunch.text = self.formatter.string(for: data[index].first_flight)
               mainVc.country.text = data[index].country
               mainVc.launchCost.text = String(format: "%.0f", data[index].cost_per_launch)
               mainVc.numberOfEngines.text = String(data[index].first_stage.engines)

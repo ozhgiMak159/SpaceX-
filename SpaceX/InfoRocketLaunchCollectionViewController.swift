@@ -26,6 +26,8 @@ class InfoRocketLaunchCollectionViewController: UICollectionViewController {
             self.collectionView.reloadData()
         }
     }
+    
+    
 
     // MARK: UICollectionViewDataSource
 
