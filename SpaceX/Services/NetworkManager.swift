@@ -41,7 +41,6 @@ class NetworkManager {
         
 }
     
-
     func fetchDataList(_ url: String, with completion: @escaping([RocketLaunches]) -> Void) {
         guard let ulrString = URL(string: url) else { return }
 

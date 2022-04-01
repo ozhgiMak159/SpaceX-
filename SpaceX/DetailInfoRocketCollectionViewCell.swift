@@ -18,7 +18,7 @@ class DetailInfoRocketCollectionViewCell: UICollectionViewCell {
     let formatter: DateFormatter = {
         let dataForm = DateFormatter()
         dataForm.locale = .current
-        dataForm.dateStyle = .medium
+        dataForm.dateStyle = .long
         return dataForm
     }()
     
@@ -28,7 +28,7 @@ class DetailInfoRocketCollectionViewCell: UICollectionViewCell {
     func one(with data: RocketLaunches) {
         
         nameRocket.text = data.name
-        //flightDate.text = formatter.string(from: data.dateUtc)
+        flightDate.text = formatter.string(from: data.dateUtc)
         
         if let data = data.success {
             if data {
