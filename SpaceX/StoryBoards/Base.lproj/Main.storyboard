@@ -257,7 +257,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehN-ky-OUm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-728" y="-196"/>
+            <point key="canvasLocation" x="-381" y="-111"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="2dz-qN-ssr">
@@ -290,7 +290,7 @@
                                         <rect key="frame" x="0.0" y="-26" width="320" height="800"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ll-3t-JD9">
-                                        <rect key="frame" x="0.0" y="424" width="320" height="468"/>
+                                        <rect key="frame" x="0.0" y="424" width="320" height="486"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="9td-l8-cPK">
                                                 <rect key="frame" x="5.5" y="263" width="309" height="114"/>
@@ -321,7 +321,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="bottom" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="Rs8-kd-7Ka">
                                                         <rect key="frame" x="152.5" y="0.0" width="156.5" height="114"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 февраля, 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00V-lM-YQo">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 февраля, 2018" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00V-lM-YQo">
                                                                 <rect key="frame" x="4" y="0.0" width="152.5" height="24"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="152.5" id="RAs-wt-zlg"/>
@@ -870,7 +870,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5U3-wd-sDE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="291" y="-196"/>
+            <point key="canvasLocation" x="538" y="-112"/>
         </scene>
     </scenes>
     <resources>

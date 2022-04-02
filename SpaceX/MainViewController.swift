@@ -41,7 +41,6 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         pageControllerRocket.currentPage = numberOfPage
-       
     }
     
     

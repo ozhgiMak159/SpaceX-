@@ -29,7 +29,12 @@ class NetworkManager {
                 return
             }
             do {
-                let infoRacket = try JSONDecoder().decode([ListRockets].self, from: data)
+                let jsonDecoder = JSONDecoder()
+                let dateFormater = DateFormatter()
+                dateFormater.dateFormat = "yyyy-MM-dd"
+                jsonDecoder.dateDecodingStrategy = .formatted(dateFormater)
+                
+                let infoRacket = try jsonDecoder.decode([ListRockets].self, from: data)
                 DispatchQueue.main.async {
                     completion(infoRacket)
                 }
