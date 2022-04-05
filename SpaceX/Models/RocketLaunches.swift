@@ -19,9 +19,6 @@ struct RocketLaunches: Decodable {
         case dateUtc = "date_utc"
     }
     
-    
-    
-    
 }
 
 

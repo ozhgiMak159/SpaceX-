@@ -19,8 +19,7 @@ class NetworkManager {
     private init() {}
     
 
-    
-    func fetchData(_ url: String, with completion: @escaping([ListRockets]) -> Void) {
+    func fetchData<T: Decodable>(dataType: T.Type,url: String, with completion: @escaping(T) -> Void) {
         guard let ulrString = URL(string: url) else { return }
         
         URLSession.shared.dataTask(with: ulrString) { data, _, error in
@@ -33,19 +32,16 @@ class NetworkManager {
                 let dateFormater = DateFormatter()
                 dateFormater.dateFormat = "yyyy-MM-dd"
                 jsonDecoder.dateDecodingStrategy = .formatted(dateFormater)
-                
-                let infoRacket = try jsonDecoder.decode([ListRockets].self, from: data)
+                let type = try jsonDecoder.decode(T.self, from: data)
                 DispatchQueue.main.async {
-                    completion(infoRacket)
+                    completion(type)
                 }
             } catch {
                 print("Error")
             }
-
         }.resume()
         
 }
-    
     func fetchDataList(_ url: String, with completion: @escaping([RocketLaunches]) -> Void) {
         guard let ulrString = URL(string: url) else { return }
 
@@ -67,11 +63,8 @@ class NetworkManager {
             } catch {
                 print("Error")
             }
-
         }.resume()
     }
-    
-    
 }
 
 class ImageManager {

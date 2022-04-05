@@ -10,19 +10,17 @@ import UIKit
 class DetailInfoRocketCollectionViewCell: UICollectionViewCell {
     
     
+    private let formatter: DateFormatter = {
+          let dataForm = DateFormatter()
+          dataForm.locale = .current
+          dataForm.dateStyle = .long
+          return dataForm
+      }()
+    
+    
     @IBOutlet var nameRocket: UILabel!
     @IBOutlet var flightDate: UILabel!
     @IBOutlet var flightResultImage: UIImageView!
-    
-    
-    let formatter: DateFormatter = {
-        let dataForm = DateFormatter()
-        dataForm.locale = .current
-        dataForm.dateStyle = .long
-        return dataForm
-    }()
-    
-
     
     
     func one(with data: RocketLaunches) {
@@ -38,7 +36,5 @@ class DetailInfoRocketCollectionViewCell: UICollectionViewCell {
             }
         }
     }
-    
-    
 }
 

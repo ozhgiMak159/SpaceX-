@@ -9,25 +9,17 @@ import Foundation
 
 
 struct ListRockets: Decodable {
-    let height: Height //(+)
-    let diameter: Diameter //(+)
-    let mass: Mass //(+)
-    let payload_weights: [PayloadWeights] //(+)
-    let name: String //(+)
-    let country: String //(+)
+    let height: Height 
+    let diameter: Diameter
+    let mass: Mass
+    let payload_weights: [PayloadWeights]
+    let name: String
+    let country: String
     let first_flight: Date
-    let first_stage: First //(+)
-    let second_stage: Second //(+)
-    let cost_per_launch: Double //(+)
+    let first_stage: First
+    let second_stage: Second
+    let cost_per_launch: Double
     let flickr_images: [String]
-    
-    /*
-     enum CodingKeys: String, CodingKey {
-         case name
-         case success
-         case dateUtc = "date_utc"
-     }
-     */
 }
 
 struct Height: Decodable {
