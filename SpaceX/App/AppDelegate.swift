@@ -13,9 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let pageControll = UIPageControl.appearance()
-        pageControll.currentPageIndicatorTintColor = .systemBlue
-        pageControll.pageIndicatorTintColor = .systemGray4
+      
         // Override point for customization after application launch.
         return true
     }

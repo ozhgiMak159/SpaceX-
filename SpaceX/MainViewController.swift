@@ -112,17 +112,17 @@ class MainViewController: UIViewController {
 //    }
     
 }
-extension MainViewController: UpData {
-
-    func upp(text1: String, text2: String, text3: String, text4: String,text5: String) {
-        unitOfHeight.text = text1
-        unitOfDiameter.text = text2
-        unitOfWeight.text = text3
-        unitOfLoad.text = text4
-
-        height.text = text5
-    }
-}
+//extension MainViewController: UpData {
+//
+//    func upp(text1: String, text2: String, text3: String, text4: String,text5: String) {
+//        unitOfHeight.text = text1
+//        unitOfDiameter.text = text2
+//        unitOfWeight.text = text3
+//        unitOfLoad.text = text4
+//
+//        height.text = text5
+//    }
+//}
 //extension MainViewController: UIPageViewControllerDelegate,UIPageViewControllerDataSource {
 //    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
 //        return 0
