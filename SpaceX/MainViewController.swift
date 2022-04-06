@@ -19,9 +19,20 @@ class MainViewController: UIViewController {
    
 
     var indexOfNumber = 0
-    var countArray = 0
-   
-    var nameText = ""
+    var initNameRocket = ""
+    var initHeight = ""
+    var initDiameter = ""
+    var initWeight = ""
+    var initLoad = ""
+    var initFirstLaunch = ""
+    var initCountry = ""
+    var initLaunchCost = ""
+    var initNumberOfEnginesFirst = ""
+    var initFuelQuantityFirst = ""
+    var initCombustionTimeFirst = ""
+    var initNumberOfEnginesSecond = ""
+    var initFuelQuantitySecond = ""
+    var initComdustionTimeSecond = ""
     
     
    
@@ -51,9 +62,9 @@ class MainViewController: UIViewController {
     @IBOutlet var launchCost: UILabel!
     
     // первая ступень
-    @IBOutlet var numberOfEngines: UILabel!
+    @IBOutlet var numberOfEnginesFirst: UILabel!
     @IBOutlet var fuelQuantityFirst: UILabel!
-    @IBOutlet var CombustionTimeFirst: UILabel!
+    @IBOutlet var combustionTimeFirst: UILabel!
     
     
     @IBOutlet var numberOfEnginesSecond: UILabel!
@@ -65,13 +76,38 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         pageControllerRocket.currentPage = indexOfNumber
-        initName()
+        initTitle()
+        firstStage()
+        secondStage()
     }
     
     
-    private func initName() {
-        nameRocket.text = nameText
+    private func initTitle() {
+        nameRocket.text = initNameRocket 
+        height.text = initHeight
+        diameter.text = initDiameter
+        weight.text = initWeight
+        load.text = initLoad
+        firstLaunch.text = initFirstLaunch
+        country.text = initCountry
+        launchCost.text = initLaunchCost
     }
+    
+    private func firstStage() {
+        numberOfEnginesFirst.text = initNumberOfEnginesFirst
+        fuelQuantityFirst.text = initFuelQuantityFirst
+        combustionTimeFirst.text = initCombustionTimeFirst
+    }
+    
+    private func secondStage() {
+        numberOfEnginesSecond.text = initNumberOfEnginesSecond
+        fuelQuantitySecond.text = initFuelQuantitySecond
+        comdustionTimeSecond.text = initComdustionTimeSecond
+    }
+    
+    
+    
+    
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        guard let navigationVC = segue.destination as? UINavigationController else { return }

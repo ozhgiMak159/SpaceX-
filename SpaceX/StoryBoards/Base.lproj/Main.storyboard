@@ -265,7 +265,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yNH-9b-WcN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2138" y="659"/>
+            <point key="canvasLocation" x="2243" y="658"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="Ilq-a0-kHC">
@@ -315,10 +315,10 @@
                                 <rect key="frame" x="0.0" y="-73" width="320" height="592"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ракетаТест" translatesAutoresizingMaskIntoConstraints="NO" id="gat-pe-zix">
-                                        <rect key="frame" x="0.0" y="6" width="320" height="800"/>
+                                        <rect key="frame" x="0.0" y="-38" width="320" height="800"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jV2-W8-Fod">
-                                        <rect key="frame" x="0.0" y="456" width="320" height="186"/>
+                                        <rect key="frame" x="0.0" y="412" width="320" height="230"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="G3y-MI-IeP">
                                                 <rect key="frame" x="5.5" y="263" width="309" height="114"/>
@@ -831,7 +831,7 @@
                                     <constraint firstItem="gat-pe-zix" firstAttribute="height" secondItem="OaH-PZ-CEC" secondAttribute="height" multiplier="0.5" priority="250" constant="110.5" id="1t4-71-EnC"/>
                                     <constraint firstAttribute="bottom" secondItem="gat-pe-zix" secondAttribute="bottom" constant="531" id="1ue-UB-MiF"/>
                                     <constraint firstAttribute="trailing" secondItem="gat-pe-zix" secondAttribute="trailing" id="9hA-YZ-HaC"/>
-                                    <constraint firstItem="gat-pe-zix" firstAttribute="top" secondItem="OaH-PZ-CEC" secondAttribute="top" constant="6" id="BGv-qb-Lgr"/>
+                                    <constraint firstItem="gat-pe-zix" firstAttribute="top" secondItem="OaH-PZ-CEC" secondAttribute="top" constant="-38" id="BGv-qb-Lgr"/>
                                     <constraint firstItem="gat-pe-zix" firstAttribute="centerX" secondItem="OaH-PZ-CEC" secondAttribute="centerX" id="Eqe-Oa-BnX"/>
                                     <constraint firstItem="gat-pe-zix" firstAttribute="leading" secondItem="OaH-PZ-CEC" secondAttribute="leading" id="NDt-Yf-99b"/>
                                     <constraint firstItem="jV2-W8-Fod" firstAttribute="centerX" secondItem="gat-pe-zix" secondAttribute="centerX" id="Q5X-3I-TAG"/>
@@ -870,7 +870,7 @@
                         <barButtonItem key="backBarButtonItem" title="Назад " id="Ywq-ql-05B"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="CombustionTimeFirst" destination="Ja1-KB-yuI" id="hnt-HC-a12"/>
+                        <outlet property="combustionTimeFirst" destination="Ja1-KB-yuI" id="hnt-HC-a12"/>
                         <outlet property="comdustionTimeSecond" destination="hBg-9f-fmR" id="gYV-qX-wM6"/>
                         <outlet property="country" destination="aDP-RV-9Gb" id="N9r-dw-wlx"/>
                         <outlet property="diameter" destination="XK3-0y-FlO" id="fx1-YX-35s"/>
@@ -882,7 +882,7 @@
                         <outlet property="launchCost" destination="cbM-NP-RqP" id="FDV-I4-gUh"/>
                         <outlet property="load" destination="swZ-dF-StU" id="bf9-dk-gNb"/>
                         <outlet property="nameRocket" destination="qQw-Pg-Jkf" id="E2F-6c-6eU"/>
-                        <outlet property="numberOfEngines" destination="h4e-ee-dpe" id="MHY-9P-4Pk"/>
+                        <outlet property="numberOfEnginesFirst" destination="h4e-ee-dpe" id="MHY-9P-4Pk"/>
                         <outlet property="numberOfEnginesSecond" destination="uUp-Hb-HgN" id="vTa-Zu-ER4"/>
                         <outlet property="pageControllerRocket" destination="L5I-gR-WFq" id="iF1-F3-e62"/>
                         <outlet property="scrollViewMain" destination="OaH-PZ-CEC" id="zaJ-Th-Gdp"/>
