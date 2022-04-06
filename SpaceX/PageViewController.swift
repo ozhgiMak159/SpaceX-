@@ -12,71 +12,50 @@ import UIKit
 class PageViewController: UIPageViewController {
     
 
-        var newArray: [ListRockets] = []
-        var currentIndex = 0
-        
-        
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            configur()
-          
-        }
-        
-        private func configur() {
-
-            
-            guard let startingVc = detaliIndex(index: 0) else { return }
-            setViewControllers([startingVc], direction: .forward, animated: true, completion: nil)
-            delegate = self
-            dataSource = self
-
+    private var newArray: [ListRockets] = []
+    var currentIndex = 0
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        NetworkManager.shered.fetchData(dataType: [ListRockets].self, url: Link.listRocet.rawValue) { data in
+            self.newArray = data
+            self.pageViewControllerMethod()
         }
       
-        private func detaliIndex(index: Int) -> MainViewController? {
-            guard let dataVc = storyboard?.instantiateViewController(withIdentifier: "MainVC") as? MainViewController else { return nil }
-            NetworkManager.shered.fetchData(dataType: [ListRockets].self, url: Link.listRocet.rawValue) { data in
-                self.newArray = data
-                if index >= self.newArray.count || self.newArray.count == 0 { return }
-                dataVc.nameRocket.text = self.newArray[index].name
-                dataVc.currentIndex = self.newArray.count
-            }
-            dataVc.indexOfNumber = index
-
-            return dataVc
-        }
+    }
         
+    private func pageViewControllerMethod() {
+        guard let startingVc = detaliIndex(index: currentIndex) else { return }
+        setViewControllers([startingVc], direction: .forward, animated: true, completion: nil)
+        dataSource = self
     }
-extension PageViewController: UIPageViewControllerDelegate,UIPageViewControllerDataSource {
-        func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-            return 0
-        }
-
-        func presentationCount(for pageViewController: UIPageViewController) -> Int {
-            return newArray.count
-        }
-
-        func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-            let vcOne = viewController as? MainViewController
-            guard var currentIndex = vcOne?.indexOfNumber else { return nil }
-            self.currentIndex = currentIndex
-
-            if currentIndex == 0 { return nil }
-            currentIndex -= 1
-            return detaliIndex(index: currentIndex)
-        }
-
-        func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-            let vcOne = viewController as? MainViewController
-            guard var currentIndex = vcOne?.indexOfNumber else { return nil }
-
-            if currentIndex == newArray.count { return nil }
-            currentIndex += 1
-            self.currentIndex = currentIndex
-            return detaliIndex(index: currentIndex)
-        }
-
-
+  
+    private func detaliIndex(index: Int) -> MainViewController? {
+        guard index >= 0 else { return nil }
+        guard index < self.newArray.count else { return nil }
+        guard let mainVC = storyboard?.instantiateViewController(withIdentifier: "MainVC") as? MainViewController else { return nil }
+        mainVC.nameText = newArray[index].name
+        
+        mainVC.indexOfNumber = index
+        
+        return mainVC
     }
+    
+}
+extension PageViewController: UIPageViewControllerDataSource {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        var mainVc = (viewController as! MainViewController).indexOfNumber
+        mainVc -= 1
+        return detaliIndex(index: mainVc)
+        }
+
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        var mainVc = (viewController as! MainViewController).indexOfNumber
+        mainVc += 1
+        return detaliIndex(index: mainVc)
+        }
+}
 
     
     
@@ -163,3 +142,50 @@ extension PageViewController: UIPageViewControllerDelegate,UIPageViewControllerD
 //
 //
 
+/*
+ func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+     let vcOne = viewController as? MainViewController
+     guard var currentIndex = vcOne?.indexOfNumber else { return nil }
+     self.currentIndex = currentIndex
+
+     if currentIndex == 0 { return nil }
+     currentIndex -= 1
+     return detaliIndex(index: currentIndex)
+ }
+
+ func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+     let vcOne = viewController as? MainViewController
+     guard var currentIndex = vcOne?.indexOfNumber else { return nil }
+
+     if currentIndex == newArray.count { return nil }
+     currentIndex += 1
+     self.currentIndex = currentIndex
+     return detaliIndex(index: currentIndex)
+ }
+
+ 
+ 
+ 
+ 
+ 
+ NetworkManager.shered.fetchData(dataType: [ListRockets].self, url: Link.listRocet.rawValue) { data in
+     self.newArray = data
+     if index >= self.newArray.count || self.newArray.count == 0 { return }
+     mainVC.nameRocket.text = self.newArray[index].name
+     mainVC.country.text = self.newArray[index].country
+     mainVC.height.text = String(self.newArray[index].height.feet)
+     mainVC.diameter.text = String(self.newArray[index].diameter.feet)
+     mainVC.weight.text = String(self.newArray[index].mass.lb)
+     mainVC.load.text =  String(self.newArray[index].payload_weights.last!.lb)
+     mainVC.launchCost.text = String(format: "$%.0f млн", self.newArray[index].cost_per_launch)
+     mainVC.numberOfEngines.text = String(self.newArray[index].first_stage.engines)
+     mainVC.fuelQuantityFirst.text = String(self.newArray[index].first_stage.fuel_amount_tons ?? 0)
+     mainVC.CombustionTimeFirst.text = String(self.newArray[index].first_stage.fuel_amount_tons ?? 0)
+     mainVC.numberOfEnginesSecond.text = String(self.newArray[index].second_stage.engines)
+     mainVC.fuelQuantitySecond.text = String(self.newArray[index].second_stage.fuel_amount_tons ?? 0)
+     mainVC.CombustionTimeFirst.text = String(self.newArray[index].second_stage.burn_time_sec ?? 0)
+     mainVC.countArray = self.newArray.count
+ }
+
+}
+ */
