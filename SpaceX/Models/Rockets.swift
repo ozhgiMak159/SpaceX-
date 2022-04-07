@@ -12,14 +12,32 @@ struct ListRockets: Decodable {
     let height: Height 
     let diameter: Diameter
     let mass: Mass
-    let payload_weights: [PayloadWeights]
+    let payloadWeights: [PayloadWeights]
     let name: String
     let country: String
-    let first_flight: Date
-    let first_stage: First
-    let second_stage: Second
-    let cost_per_launch: Double
-    let flickr_images: [String]
+    let firstFlight: Date
+    let firstStage: First
+    let secondStage: Second
+    let costPerLaunch: Double
+    let flickrImages: [String]
+    
+    var costResult: Double {
+     return costPerLaunch / 1000000
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case height
+        case diameter
+        case mass
+        case payloadWeights = "payload_weights"
+        case name
+        case country
+        case firstFlight = "first_flight"
+        case firstStage = "first_stage"
+        case secondStage = "second_stage"
+        case costPerLaunch = "cost_per_launch"
+        case flickrImages = "flickr_images"
+    }
 }
 
 struct Height: Decodable {
@@ -44,14 +62,40 @@ struct PayloadWeights: Decodable {
 
 struct First: Decodable {
     let engines: Int
-    let fuel_amount_tons: Double?
-    let burn_time_sec: Int?
+    let fuelAmountTons: Double?
+    let burnTimeSec: Int?
+    
+    enum CodingKeys: String, CodingKey {
+       case engines
+       case fuelAmountTons = "fuel_amount_tons"
+       case burnTimeSec = "burn_time_sec"
+    }
+    
 }
 
 struct Second: Decodable {
     let engines: Int
-    let fuel_amount_tons: Double?
-    let burn_time_sec: Int?
+    let fuelAmountTons: Double?
+    let burnTimeSec: Int?
+    
+    enum CodingKeys: String, CodingKey {
+       case engines
+       case fuelAmountTons = "fuel_amount_tons"
+       case burnTimeSec = "burn_time_sec"
+    }
 }
 
 
+/*
+ private let numberFormatter: NumberFormatter = {
+     let number = NumberFormatter()
+     number.numberStyle = .currency
+     number.currencyGroupingSeparator = ""
+     
+     number.locale = .current
+     number.maximumFractionDigits = 0
+     
+     return number
+     
+ }()
+ */

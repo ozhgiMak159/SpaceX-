@@ -1,0 +1,180 @@
+
+/* Class = "UILabel"; text = "Количество топлива"; ObjectID = "0i3-ev-VOo"; */
+"0i3-ev-VOo.text" = "Количество топлива";
+
+/* Class = "UILabel"; text = "Первый запуск"; ObjectID = "0mi-ZY-xQj"; */
+"0mi-ZY-xQj.text" = "Первый запуск";
+
+/* Class = "UILabel"; text = "Полезная нагрузка"; ObjectID = "1Fm-US-zmi"; */
+"1Fm-US-zmi.text" = "Полезная нагрузка";
+
+/* Class = "UILabel"; text = "Количество топлива"; ObjectID = "1gQ-xV-WVK"; */
+"1gQ-xV-WVK.text" = "Количество топлива";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "3Ak-b8-GCe"; */
+"3Ak-b8-GCe.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "sec"; ObjectID = "51z-2z-N2A"; */
+"51z-2z-N2A.text" = "sec";
+
+/* Class = "UILabel"; text = "Высота"; ObjectID = "53H-t9-bl8"; */
+"53H-t9-bl8.text" = "Высота";
+
+/* Class = "UILabel"; text = "Диаметр,"; ObjectID = "5HO-iw-JlZ"; */
+"5HO-iw-JlZ.text" = "Диаметр,";
+
+/* Class = "UIBarButtonItem"; title = "Назад"; ObjectID = "6GI-bZ-1E0"; */
+"6GI-bZ-1E0.title" = "Назад";
+
+/* Class = "UILabel"; text = "lb"; ObjectID = "6os-nQ-0EN"; */
+"6os-nQ-0EN.text" = "lb";
+
+/* Class = "UILabel"; text = "Масса"; ObjectID = "9xO-fg-E9o"; */
+"9xO-fg-E9o.text" = "Масса";
+
+/* Class = "UILabel"; text = "ft"; ObjectID = "AfF-fK-7LG"; */
+"AfF-fK-7LG.text" = "ft";
+
+/* Class = "UILabel"; text = "3,125,735"; ObjectID = "CR5-pj-GeP"; */
+"CR5-pj-GeP.text" = "3,125,735";
+
+/* Class = "UILabel"; text = "Страна"; ObjectID = "DpE-QC-0fL"; */
+"DpE-QC-0fL.text" = "Страна";
+
+/* Class = "UIBarButtonItem"; title = "сор"; ObjectID = "ERM-Hx-xTk"; */
+"ERM-Hx-xTk.title" = "сор";
+
+/* Class = "UILabel"; text = "Количество двигателей"; ObjectID = "F0Z-eq-s0w"; */
+"F0Z-eq-s0w.text" = "Количество двигателей";
+
+/* Class = "UILabel"; text = "Время сгорания"; ObjectID = "Gbf-bt-JGM"; */
+"Gbf-bt-JGM.text" = "Время сгорания";
+
+/* Class = "UILabel"; text = "Масса,"; ObjectID = "GeH-zR-upY"; */
+"GeH-zR-upY.text" = "Масса,";
+
+/* Class = "UILabel"; text = "Время сгорания"; ObjectID = "HTG-co-TN5"; */
+"HTG-co-TN5.text" = "Время сгорания";
+
+/* Class = "UIBarButtonItem"; title = "Закрыть"; ObjectID = "I1K-Xr-rjG"; */
+"I1K-Xr-rjG.title" = "Закрыть";
+
+/* Class = "UILabel"; text = "593"; ObjectID = "Ja1-KB-yuI"; */
+"Ja1-KB-yuI.text" = "593";
+
+/* Class = "UISegmentedControl"; Jxp-jB-YEU.segmentTitles[0] = "kg"; ObjectID = "Jxp-jB-YEU"; */
+"Jxp-jB-YEU.segmentTitles[0]" = "kg";
+
+/* Class = "UISegmentedControl"; Jxp-jB-YEU.segmentTitles[1] = "lb"; ObjectID = "Jxp-jB-YEU"; */
+"Jxp-jB-YEU.segmentTitles[1]" = "lb";
+
+/* Class = "UILabel"; text = "229.6"; ObjectID = "Kbp-Kd-Zxz"; */
+"Kbp-Kd-Zxz.text" = "229.6";
+
+/* Class = "UILabel"; text = "Высота,"; ObjectID = "Kss-5B-m1t"; */
+"Kss-5B-m1t.text" = "Высота,";
+
+/* Class = "UINavigationItem"; title = "Настройки"; ObjectID = "Mzx-aw-DXx"; */
+"Mzx-aw-DXx.title" = "Настройки";
+
+/* Class = "UISegmentedControl"; OWT-D6-ej1.segmentTitles[0] = "m"; ObjectID = "OWT-D6-ej1"; */
+"OWT-D6-ej1.segmentTitles[0]" = "m";
+
+/* Class = "UISegmentedControl"; OWT-D6-ej1.segmentTitles[1] = "ft"; ObjectID = "OWT-D6-ej1"; */
+"OWT-D6-ej1.segmentTitles[1]" = "ft";
+
+/* Class = "UILabel"; text = "7 февраля, 2018"; ObjectID = "QMf-vF-hzi"; */
+"QMf-vF-hzi.text" = "7 февраля, 2018";
+
+/* Class = "UILabel"; text = "ВТОРАЯ СТУПЕНЬ"; ObjectID = "Qr4-yi-qb1"; */
+"Qr4-yi-qb1.text" = "ВТОРАЯ СТУПЕНЬ";
+
+/* Class = "UILabel"; text = "lb"; ObjectID = "RdM-ze-pSc"; */
+"RdM-ze-pSc.text" = "lb";
+
+/* Class = "UILabel"; text = "308,6"; ObjectID = "V7R-f6-oKa"; */
+"V7R-f6-oKa.text" = "308,6";
+
+/* Class = "UILabel"; text = "Количество двигателей"; ObjectID = "VcT-5b-BGJ"; */
+"VcT-5b-BGJ.text" = "Количество двигателей";
+
+/* Class = "UISegmentedControl"; Vdi-02-FOZ.segmentTitles[0] = "kg"; ObjectID = "Vdi-02-FOZ"; */
+"Vdi-02-FOZ.segmentTitles[0]" = "kg";
+
+/* Class = "UISegmentedControl"; Vdi-02-FOZ.segmentTitles[1] = "lb"; ObjectID = "Vdi-02-FOZ"; */
+"Vdi-02-FOZ.segmentTitles[1]" = "lb";
+
+/* Class = "UILabel"; text = "sec"; ObjectID = "Vg6-XN-I8u"; */
+"Vg6-XN-I8u.text" = "sec";
+
+/* Class = "UILabel"; text = "Диаметр"; ObjectID = "WHU-pR-i6J"; */
+"WHU-pR-i6J.text" = "Диаметр";
+
+/* Class = "UILabel"; text = "229.6"; ObjectID = "XK3-0y-FlO"; */
+"XK3-0y-FlO.text" = "229.6";
+
+/* Class = "UISegmentedControl"; YwG-me-WvS.segmentTitles[0] = "m"; ObjectID = "YwG-me-WvS"; */
+"YwG-me-WvS.segmentTitles[0]" = "m";
+
+/* Class = "UISegmentedControl"; YwG-me-WvS.segmentTitles[1] = "ft"; ObjectID = "YwG-me-WvS"; */
+"YwG-me-WvS.segmentTitles[1]" = "ft";
+
+/* Class = "UIBarButtonItem"; title = "Назад "; ObjectID = "Ywq-ql-05B"; */
+"Ywq-ql-05B.title" = "Назад ";
+
+/* Class = "UILabel"; text = "США"; ObjectID = "aDP-RV-9Gb"; */
+"aDP-RV-9Gb.text" = "США";
+
+/* Class = "UILabel"; text = "FalconSat"; ObjectID = "aNk-4K-7CD"; */
+"aNk-4K-7CD.text" = "FalconSat";
+
+/* Class = "UINavigationItem"; title = "Запуски"; ObjectID = "aTK-M2-c6w"; */
+"aTK-M2-c6w.title" = "Запуски";
+
+/* Class = "UILabel"; text = "ПЕРВАЯ СТУПЕНЬ"; ObjectID = "c3k-AI-Wjp"; */
+"c3k-AI-Wjp.text" = "ПЕРВАЯ СТУПЕНЬ";
+
+/* Class = "UILabel"; text = "$90 млн"; ObjectID = "cbM-NP-RqP"; */
+"cbM-NP-RqP.text" = "$90 млн";
+
+/* Class = "UIButton"; configuration.title = "Посмотреть запуски "; ObjectID = "d04-Ex-uDc"; */
+"d04-Ex-uDc.configuration.title" = "Посмотреть запуски ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "d04-Ex-uDc"; */
+"d04-Ex-uDc.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "ft"; ObjectID = "daS-Tb-BDn"; */
+"daS-Tb-BDn.text" = "ft";
+
+/* Class = "UILabel"; text = "ton"; ObjectID = "es0-dm-lem"; */
+"es0-dm-lem.text" = "ton";
+
+/* Class = "UILabel"; text = "27"; ObjectID = "h4e-ee-dpe"; */
+"h4e-ee-dpe.text" = "27";
+
+/* Class = "UILabel"; text = "593"; ObjectID = "hBg-9f-fmR"; */
+"hBg-9f-fmR.text" = "593";
+
+/* Class = "UILabel"; text = "2 февраля, 2022"; ObjectID = "jNY-VI-CjE"; */
+"jNY-VI-CjE.text" = "2 февраля, 2022";
+
+/* Class = "UILabel"; text = "ton"; ObjectID = "ktl-oE-WTf"; */
+"ktl-oE-WTf.text" = "ton";
+
+/* Class = "UILabel"; text = "Стоимость "; ObjectID = "o3G-7b-TbW"; */
+"o3G-7b-TbW.text" = "Стоимость ";
+
+/* Class = "UILabel"; text = "Нагрузка,"; ObjectID = "ouJ-tp-qMX"; */
+"ouJ-tp-qMX.text" = "Нагрузка,";
+
+/* Class = "UILabel"; text = "Falcon Heavy1"; ObjectID = "qQw-Pg-Jkf"; */
+"qQw-Pg-Jkf.text" = "Falcon Heavy1";
+
+/* Class = "UILabel"; text = "308,6"; ObjectID = "qa4-tM-sP5"; */
+"qa4-tM-sP5.text" = "308,6";
+
+/* Class = "UILabel"; text = "140,660"; ObjectID = "swZ-dF-StU"; */
+"swZ-dF-StU.text" = "140,660";
+
+/* Class = "UILabel"; text = "27"; ObjectID = "uUp-Hb-HgN"; */
+"uUp-Hb-HgN.text" = "27";

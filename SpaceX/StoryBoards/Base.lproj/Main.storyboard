@@ -267,21 +267,6 @@
             </objects>
             <point key="canvasLocation" x="2243" y="658"/>
         </scene>
-        <!--Start View Controller-->
-        <scene sceneID="Ilq-a0-kHC">
-            <objects>
-                <viewController id="7Bz-E3-4hL" customClass="StartViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="84i-oo-Z3C">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="A1G-V2-Vey"/>
-                        <color key="backgroundColor" systemColor="labelColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kiT-fx-2q2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="189" y="-113"/>
-        </scene>
         <!--Page View Controller-->
         <scene sceneID="yzv-m2-xnB">
             <objects>
@@ -902,9 +887,6 @@
         <image name="False" width="42" height="55"/>
         <image name="setting" width="32" height="32"/>
         <image name="ракетаТест" width="1200" height="800"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
