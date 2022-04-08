@@ -19,6 +19,7 @@ class MainViewController: UIViewController {
    
 
     var indexOfNumber = 0
+   // var initImage: UIImage!
     var initNameRocket = ""
     var initHeight = ""
     var initDiameter = ""

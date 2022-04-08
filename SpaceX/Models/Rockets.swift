@@ -14,7 +14,7 @@ struct ListRockets: Decodable {
     let mass: Mass
     let payloadWeights: [PayloadWeights]
     let name: String
-    let country: String
+   // let country: String
     let firstFlight: Date
     let firstStage: First
     let secondStage: Second
@@ -31,7 +31,7 @@ struct ListRockets: Decodable {
         case mass
         case payloadWeights = "payload_weights"
         case name
-        case country
+       // case country
         case firstFlight = "first_flight"
         case firstStage = "first_stage"
         case secondStage = "second_stage"
@@ -40,30 +40,36 @@ struct ListRockets: Decodable {
     }
 }
 
+
 struct Height: Decodable {
     let meters: Double
     let feet: Double
 }
+
 
 struct Diameter: Decodable {
     let meters: Double
     let feet: Double
 }
 
+
 struct Mass: Decodable {
     let kg: Double
     let lb: Double
 }
+
 
 struct PayloadWeights: Decodable {
     let kg: Double
     let lb: Double
 }
 
+
 struct First: Decodable {
     let engines: Int
     let fuelAmountTons: Double?
     let burnTimeSec: Int?
+    
     
     enum CodingKeys: String, CodingKey {
        case engines
@@ -73,10 +79,12 @@ struct First: Decodable {
     
 }
 
+
 struct Second: Decodable {
     let engines: Int
     let fuelAmountTons: Double?
     let burnTimeSec: Int?
+    
     
     enum CodingKeys: String, CodingKey {
        case engines

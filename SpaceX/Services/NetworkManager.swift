@@ -65,15 +65,11 @@ class NetworkManager {
             }
         }.resume()
     }
-}
-
-class ImageManager {
-    static var shered = ImageManager()
-    private init() {}
     
     func fetchImage(from url: String?) -> Data? {
         guard let stringUrl = url else { return nil }
         guard let imageURL = URL(string: stringUrl) else { return nil }
         return try? Data(contentsOf: imageURL)
-    }
+      }
+
 }

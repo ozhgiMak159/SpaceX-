@@ -12,8 +12,15 @@ import UIKit
 class PageViewController: UIPageViewController {
     
 
-    private var newArray: [ListRockets] = []
+   private var newArray: [ListRockets] = []
     
+   private let countries = [
+        NSLocalizedString("Republic of the Marshall Islands", comment: ""),
+        NSLocalizedString("United States", comment: ""),
+        NSLocalizedString("United States", comment: ""),
+        NSLocalizedString("United States", comment: "")
+    ]
+
     private let formatter: DateFormatter = {
             let dataForm = DateFormatter()
             dataForm.locale = .current
@@ -40,9 +47,16 @@ class PageViewController: UIPageViewController {
         guard index >= 0 else { return nil }
         guard index < self.newArray.count else { return nil }
         guard let mainVC = storyboard?.instantiateViewController(withIdentifier: "MainVC") as? MainViewController else { return nil }
+        guard let imageData = NetworkManager.shered.fetchImage(from: newArray[index].flickrImages.first!) else { return nil }
+        DispatchQueue.global().async {
+            DispatchQueue.main.async {
+                mainVC.imageRocket.image = UIImage(data: imageData)
+            }
+        }
+        
         mainVC.initNameRocket = newArray[index].name
         mainVC.initFirstLaunch = self.formatter.string(from: newArray[index].firstFlight)
-        mainVC.initCountry = newArray[index].country
+        mainVC.initCountry = countries[index]
         mainVC.initLaunchCost = String(format: "$%.0f млн", newArray[index].costResult)
         mainVC.initHeight = String(newArray[index].height.feet)
         mainVC.initDiameter = String(newArray[index].diameter.feet)
