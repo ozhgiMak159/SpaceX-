@@ -34,6 +34,8 @@ class DetailInfoRocketCollectionViewCell: UICollectionViewCell {
             } else {
                 flightResultImage.image = UIImage(named: "False")
             }
+        } else {
+            flightResultImage.image = UIImage(named: "True or False")
         }
     }
 }

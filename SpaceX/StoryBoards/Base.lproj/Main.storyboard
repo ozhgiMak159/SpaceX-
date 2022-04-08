@@ -12,7 +12,7 @@
         <!--Настройки-->
         <scene sceneID="MZJ-wW-FlB">
             <objects>
-                <viewController extendedLayoutIncludesOpaqueBars="YES" id="m8g-1f-zZq" customClass="SettingsViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsVC" extendedLayoutIncludesOpaqueBars="YES" id="m8g-1f-zZq" customClass="SettingsViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y2B-nF-a2d">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -177,9 +177,9 @@
         <!--Имя -->
         <scene sceneID="mGJ-QP-h1W">
             <objects>
-                <collectionViewController id="T5f-fq-BDV" customClass="InfoRocketLaunchCollectionViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="InfoVc" id="T5f-fq-BDV" customClass="InfoRocketLaunchCollectionViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="rXB-Td-HhW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="17" minimumInteritemSpacing="10" id="fPN-ld-yga">
@@ -189,7 +189,7 @@
                             <inset key="sectionInset" minX="0.0" minY="60" maxX="10" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="62W-eR-WUb">
-                            <rect key="frame" x="0.0" y="-56" width="320" height="548"/>
+                            <rect key="frame" x="0.0" y="-44" width="320" height="568"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </activityIndicatorView>
@@ -262,13 +262,16 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yNH-9b-WcN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3077" y="656"/>
+            <point key="canvasLocation" x="3084" y="656"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="yzv-m2-xnB">
             <objects>
                 <pageViewController storyboardIdentifier="PageVc" autoresizesArchivedViewToFullSize="NO" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="E2J-8Y-hUV" customClass="PageViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="pKP-K3-dUc"/>
+                    <connections>
+                        <segue destination="w4n-b2-fa7" kind="modal" modalPresentationStyle="fullScreen" id="Xol-Ay-JJl"/>
+                    </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehN-ky-OUm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -300,7 +303,7 @@
                                         <rect key="frame" x="0.0" y="-38" width="320" height="800"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jV2-W8-Fod">
-                                        <rect key="frame" x="0.0" y="412" width="320" height="230"/>
+                                        <rect key="frame" x="0.0" y="412" width="320" height="929"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="G3y-MI-IeP">
                                                 <rect key="frame" x="5.5" y="263" width="309" height="114"/>
@@ -754,7 +757,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="tjR-uu-glB" kind="show" id="cml-Wp-9dX"/>
+                                                    <segue destination="tjR-uu-glB" kind="modal" modalPresentationStyle="fullScreen" id="jLP-gm-yO0"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ak-b8-GCe">
@@ -829,7 +832,7 @@
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" defersCurrentPageDisplay="YES" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="L5I-gR-WFq">
                                 <rect key="frame" x="0.0" y="539" width="320" height="26"/>
-                                <color key="pageIndicatorTintColor" systemColor="systemGray2Color"/>
+                                <color key="pageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" systemColor="linkColor"/>
                             </pageControl>
                         </subviews>
@@ -889,10 +892,12 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="mFG-rL-UwH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mCD-SX-ZyE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.1532291174" green="0.1532291174" blue="0.1532291174" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
@@ -903,7 +908,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lap-B7-eVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2242.5" y="655.9859154929577"/>
+            <point key="canvasLocation" x="2243" y="656"/>
         </scene>
     </scenes>
     <resources>
@@ -915,9 +920,6 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

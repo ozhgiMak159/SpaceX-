@@ -71,6 +71,12 @@ class PageViewController: UIPageViewController {
         mainVC.indexOfNumber = index
         return mainVC
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let mainVc = segue.destination as? MainViewController else { return }
+        mainVc.newArrayMain = self.newArray
+    }
         
 }
 

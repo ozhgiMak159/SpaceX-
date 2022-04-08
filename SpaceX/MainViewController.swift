@@ -18,6 +18,9 @@ protocol UpData {
 class MainViewController: UIViewController {
    
 
+    
+    var newArrayMain: [ListRockets] = []
+    
     var indexOfNumber = 0
    // var initImage: UIImage!
     var initNameRocket = ""
@@ -107,19 +110,21 @@ class MainViewController: UIViewController {
     }
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let navigationVC = segue.destination as? UINavigationController else { return }
+        guard let infoVc = navigationVC.topViewController as? InfoRocketLaunchCollectionViewController else { return }
+        infoVc.title = nameRocket.text
+        
+    }
     
-    
-    
+}
+
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        guard let navigationVC = segue.destination as? UINavigationController else { return }
 //        guard let settingsVc = navigationVC.topViewController as? SettingsViewController else { return }
 //        settingsVc.newArray = self.newArray
 //        settingsVc.delegate = self
 //    }
-    
-}
-
-
 
 
 
