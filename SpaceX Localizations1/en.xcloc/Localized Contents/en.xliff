@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="SpaceX/en.lproj/InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.2.1" build-num="13C100"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>SpaceX</source>
+        <target>SpaceX</target>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="SpaceX/en.lproj/Localizable.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.2.1" build-num="13C100"/>
+    </header>
+    <body>
+      <trans-unit id="Republic of the Marshall Islands" xml:space="preserve">
+        <source>Republic of the Marshall Islands</source>
+        <target>Republic of the Marshall Islands</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="United States" xml:space="preserve">
+        <source>United States</source>
+        <target>United States</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="SpaceX/StoryBoards/Base.lproj/Main.storyboard" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.2.1" build-num="13C100"/>
+    </header>
+    <body>
+      <trans-unit id="0i3-ev-VOo.text" xml:space="preserve">
+        <source>Количество топлива</source>
+        <target>Количество топлива</target>
+        <note>Class = "UILabel"; text = "Количество топлива"; ObjectID = "0i3-ev-VOo";</note>
+      </trans-unit>
+      <trans-unit id="0mi-ZY-xQj.text" xml:space="preserve">
+        <source>Первый запуск</source>
+        <target>Первый запуск</target>
+        <note>Class = "UILabel"; text = "Первый запуск"; ObjectID = "0mi-ZY-xQj";</note>
+      </trans-unit>
+      <trans-unit id="1Fm-US-zmi.text" xml:space="preserve">
+        <source>Полезная нагрузка</source>
+        <target>Полезная нагрузка</target>
+        <note>Class = "UILabel"; text = "Полезная нагрузка"; ObjectID = "1Fm-US-zmi";</note>
+      </trans-unit>
+      <trans-unit id="1gQ-xV-WVK.text" xml:space="preserve">
+        <source>Количество топлива</source>
+        <target>Количество топлива</target>
+        <note>Class = "UILabel"; text = "Количество топлива"; ObjectID = "1gQ-xV-WVK";</note>
+      </trans-unit>
+      <trans-unit id="3Ak-b8-GCe.normalTitle" xml:space="preserve">
+        <source>Button</source>
+        <target>Button</target>
+        <note>Class = "UIButton"; normalTitle = "Button"; ObjectID = "3Ak-b8-GCe";</note>
+      </trans-unit>
+      <trans-unit id="5HO-iw-JlZ.text" xml:space="preserve">
+        <source>Диаметр,</source>
+        <target>Диаметр,</target>
+        <note>Class = "UILabel"; text = "Диаметр,"; ObjectID = "5HO-iw-JlZ";</note>
+      </trans-unit>
+      <trans-unit id="6GI-bZ-1E0.title" xml:space="preserve">
+        <source>Назад</source>
+        <target>Назад</target>
+        <note>Class = "UIBarButtonItem"; title = "Назад"; ObjectID = "6GI-bZ-1E0";</note>
+      </trans-unit>
+      <trans-unit id="6os-nQ-0EN.text" xml:space="preserve">
+        <source>lb</source>
+        <target>lb</target>
+        <note>Class = "UILabel"; text = "lb"; ObjectID = "6os-nQ-0EN";</note>
+      </trans-unit>
+      <trans-unit id="9xO-fg-E9o.text" xml:space="preserve">
+        <source>Масса</source>
+        <target>Масса</target>
+        <note>Class = "UILabel"; text = "Масса"; ObjectID = "9xO-fg-E9o";</note>
+      </trans-unit>
+      <trans-unit id="51z-2z-N2A.text" xml:space="preserve">
+        <source>sec</source>
+        <target>sec</target>
+        <note>Class = "UILabel"; text = "sec"; ObjectID = "51z-2z-N2A";</note>
+      </trans-unit>
+      <trans-unit id="53H-t9-bl8.text" xml:space="preserve">
+        <source>Высота</source>
+        <target>Высота</target>
+        <note>Class = "UILabel"; text = "Высота"; ObjectID = "53H-t9-bl8";</note>
+      </trans-unit>
+      <trans-unit id="AfF-fK-7LG.text" xml:space="preserve">
+        <source>ft</source>
+        <target>ft</target>
+        <note>Class = "UILabel"; text = "ft"; ObjectID = "AfF-fK-7LG";</note>
+      </trans-unit>
+      <trans-unit id="CR5-pj-GeP.text" xml:space="preserve">
+        <source>3,125,735</source>
+        <target>3,125,735</target>
+        <note>Class = "UILabel"; text = "3,125,735"; ObjectID = "CR5-pj-GeP";</note>
+      </trans-unit>
+      <trans-unit id="DpE-QC-0fL.text" xml:space="preserve">
+        <source>Страна</source>
+        <target>Страна</target>
+        <note>Class = "UILabel"; text = "Страна"; ObjectID = "DpE-QC-0fL";</note>
+      </trans-unit>
+      <trans-unit id="ERM-Hx-xTk.title" xml:space="preserve">
+        <source>сор</source>
+        <target>сор</target>
+        <note>Class = "UIBarButtonItem"; title = "сор"; ObjectID = "ERM-Hx-xTk";</note>
+      </trans-unit>
+      <trans-unit id="F0Z-eq-s0w.text" xml:space="preserve">
+        <source>Количество двигателей</source>
+        <target>Количество двигателей</target>
+        <note>Class = "UILabel"; text = "Количество двигателей"; ObjectID = "F0Z-eq-s0w";</note>
+      </trans-unit>
+      <trans-unit id="Gbf-bt-JGM.text" xml:space="preserve">
+        <source>Время сгорания</source>
+        <target>Время сгорания</target>
+        <note>Class = "UILabel"; text = "Время сгорания"; ObjectID = "Gbf-bt-JGM";</note>
+      </trans-unit>
+      <trans-unit id="GeH-zR-upY.text" xml:space="preserve">
+        <source>Масса,</source>
+        <target>Масса,</target>
+        <note>Class = "UILabel"; text = "Масса,"; ObjectID = "GeH-zR-upY";</note>
+      </trans-unit>
+      <trans-unit id="HTG-co-TN5.text" xml:space="preserve">
+        <source>Время сгорания</source>
+        <target>Время сгорания</target>
+        <note>Class = "UILabel"; text = "Время сгорания"; ObjectID = "HTG-co-TN5";</note>
+      </trans-unit>
+      <trans-unit id="I1K-Xr-rjG.title" xml:space="preserve">
+        <source>Закрыть</source>
+        <target>Закрыть</target>
+        <note>Class = "UIBarButtonItem"; title = "Закрыть"; ObjectID = "I1K-Xr-rjG";</note>
+      </trans-unit>
+      <trans-unit id="Ja1-KB-yuI.text" xml:space="preserve">
+        <source>593</source>
+        <target>593</target>
+        <note>Class = "UILabel"; text = "593"; ObjectID = "Ja1-KB-yuI";</note>
+      </trans-unit>
+      <trans-unit id="Jxp-jB-YEU.segmentTitles[0]" xml:space="preserve">
+        <source>kg</source>
+        <target>kg</target>
+        <note>Class = "UISegmentedControl"; Jxp-jB-YEU.segmentTitles[0] = "kg"; ObjectID = "Jxp-jB-YEU";</note>
+      </trans-unit>
+      <trans-unit id="Jxp-jB-YEU.segmentTitles[1]" xml:space="preserve">
+        <source>lb</source>
+        <target>lb</target>
+        <note>Class = "UISegmentedControl"; Jxp-jB-YEU.segmentTitles[1] = "lb"; ObjectID = "Jxp-jB-YEU";</note>
+      </trans-unit>
+      <trans-unit id="Kbp-Kd-Zxz.text" xml:space="preserve">
+        <source>229.6</source>
+        <target>229.6</target>
+        <note>Class = "UILabel"; text = "229.6"; ObjectID = "Kbp-Kd-Zxz";</note>
+      </trans-unit>
+      <trans-unit id="Kss-5B-m1t.text" xml:space="preserve">
+        <source>Высота,</source>
+        <target>Высота,</target>
+        <note>Class = "UILabel"; text = "Высота,"; ObjectID = "Kss-5B-m1t";</note>
+      </trans-unit>
+      <trans-unit id="Mzx-aw-DXx.title" xml:space="preserve">
+        <source>Настройки</source>
+        <target>Настройки</target>
+        <note>Class = "UINavigationItem"; title = "Настройки"; ObjectID = "Mzx-aw-DXx";</note>
+      </trans-unit>
+      <trans-unit id="OWT-D6-ej1.segmentTitles[0]" xml:space="preserve">
+        <source>m</source>
+        <target>m</target>
+        <note>Class = "UISegmentedControl"; OWT-D6-ej1.segmentTitles[0] = "m"; ObjectID = "OWT-D6-ej1";</note>
+      </trans-unit>
+      <trans-unit id="OWT-D6-ej1.segmentTitles[1]" xml:space="preserve">
+        <source>ft</source>
+        <target>ft</target>
+        <note>Class = "UISegmentedControl"; OWT-D6-ej1.segmentTitles[1] = "ft"; ObjectID = "OWT-D6-ej1";</note>
+      </trans-unit>
+      <trans-unit id="QMf-vF-hzi.text" xml:space="preserve">
+        <source>7 февраля, 2018</source>
+        <target>7 февраля, 2018</target>
+        <note>Class = "UILabel"; text = "7 февраля, 2018"; ObjectID = "QMf-vF-hzi";</note>
+      </trans-unit>
+      <trans-unit id="Qr4-yi-qb1.text" xml:space="preserve">
+        <source>ВТОРАЯ СТУПЕНЬ</source>
+        <target>ВТОРАЯ СТУПЕНЬ</target>
+        <note>Class = "UILabel"; text = "ВТОРАЯ СТУПЕНЬ"; ObjectID = "Qr4-yi-qb1";</note>
+      </trans-unit>
+      <trans-unit id="RdM-ze-pSc.text" xml:space="preserve">
+        <source>lb</source>
+        <target>lb</target>
+        <note>Class = "UILabel"; text = "lb"; ObjectID = "RdM-ze-pSc";</note>
+      </trans-unit>
+      <trans-unit id="V7R-f6-oKa.text" xml:space="preserve">
+        <source>308,6</source>
+        <target>308,6</target>
+        <note>Class = "UILabel"; text = "308,6"; ObjectID = "V7R-f6-oKa";</note>
+      </trans-unit>
+      <trans-unit id="VcT-5b-BGJ.text" xml:space="preserve">
+        <source>Количество двигателей</source>
+        <target>Количество двигателей</target>
+        <note>Class = "UILabel"; text = "Количество двигателей"; ObjectID = "VcT-5b-BGJ";</note>
+      </trans-unit>
+      <trans-unit id="Vdi-02-FOZ.segmentTitles[0]" xml:space="preserve">
+        <source>kg</source>
+        <target>kg</target>
+        <note>Class = "UISegmentedControl"; Vdi-02-FOZ.segmentTitles[0] = "kg"; ObjectID = "Vdi-02-FOZ";</note>
+      </trans-unit>
+      <trans-unit id="Vdi-02-FOZ.segmentTitles[1]" xml:space="preserve">
+        <source>lb</source>
+        <target>lb</target>
+        <note>Class = "UISegmentedControl"; Vdi-02-FOZ.segmentTitles[1] = "lb"; ObjectID = "Vdi-02-FOZ";</note>
+      </trans-unit>
+      <trans-unit id="Vg6-XN-I8u.text" xml:space="preserve">
+        <source>sec</source>
+        <target>sec</target>
+        <note>Class = "UILabel"; text = "sec"; ObjectID = "Vg6-XN-I8u";</note>
+      </trans-unit>
+      <trans-unit id="WHU-pR-i6J.text" xml:space="preserve">
+        <source>Диаметр</source>
+        <target>Диаметр</target>
+        <note>Class = "UILabel"; text = "Диаметр"; ObjectID = "WHU-pR-i6J";</note>
+      </trans-unit>
+      <trans-unit id="XK3-0y-FlO.text" xml:space="preserve">
+        <source>229.6</source>
+        <target>229.6</target>
+        <note>Class = "UILabel"; text = "229.6"; ObjectID = "XK3-0y-FlO";</note>
+      </trans-unit>
+      <trans-unit id="YwG-me-WvS.segmentTitles[0]" xml:space="preserve">
+        <source>m</source>
+        <target>m</target>
+        <note>Class = "UISegmentedControl"; YwG-me-WvS.segmentTitles[0] = "m"; ObjectID = "YwG-me-WvS";</note>
+      </trans-unit>
+      <trans-unit id="YwG-me-WvS.segmentTitles[1]" xml:space="preserve">
+        <source>ft</source>
+        <target>ft</target>
+        <note>Class = "UISegmentedControl"; YwG-me-WvS.segmentTitles[1] = "ft"; ObjectID = "YwG-me-WvS";</note>
+      </trans-unit>
+      <trans-unit id="Ywq-ql-05B.title" xml:space="preserve">
+        <source>Назад </source>
+        <target>Назад </target>
+        <note>Class = "UIBarButtonItem"; title = "Назад "; ObjectID = "Ywq-ql-05B";</note>
+      </trans-unit>
+      <trans-unit id="aDP-RV-9Gb.text" xml:space="preserve">
+        <source>США</source>
+        <target>США</target>
+        <note>Class = "UILabel"; text = "США"; ObjectID = "aDP-RV-9Gb";</note>
+      </trans-unit>
+      <trans-unit id="aNk-4K-7CD.text" xml:space="preserve">
+        <source>FalconSat</source>
+        <target>FalconSat</target>
+        <note>Class = "UILabel"; text = "FalconSat"; ObjectID = "aNk-4K-7CD";</note>
+      </trans-unit>
+      <trans-unit id="aTK-M2-c6w.title" xml:space="preserve">
+        <source>Запуски</source>
+        <target>Запуски</target>
+        <note>Class = "UINavigationItem"; title = "Запуски"; ObjectID = "aTK-M2-c6w";</note>
+      </trans-unit>
+      <trans-unit id="c3k-AI-Wjp.text" xml:space="preserve">
+        <source>ПЕРВАЯ СТУПЕНЬ</source>
+        <target>ПЕРВАЯ СТУПЕНЬ</target>
+        <note>Class = "UILabel"; text = "ПЕРВАЯ СТУПЕНЬ"; ObjectID = "c3k-AI-Wjp";</note>
+      </trans-unit>
+      <trans-unit id="cbM-NP-RqP.text" xml:space="preserve">
+        <source>$90 млн</source>
+        <target>$90 млн</target>
+        <note>Class = "UILabel"; text = "$90 млн"; ObjectID = "cbM-NP-RqP";</note>
+      </trans-unit>
+      <trans-unit id="d04-Ex-uDc.normalTitle" xml:space="preserve">
+        <source>Button</source>
+        <target>Button</target>
+        <note>Class = "UIButton"; normalTitle = "Button"; ObjectID = "d04-Ex-uDc";</note>
+      </trans-unit>
+      <trans-unit id="daS-Tb-BDn.text" xml:space="preserve">
+        <source>ft</source>
+        <target>ft</target>
+        <note>Class = "UILabel"; text = "ft"; ObjectID = "daS-Tb-BDn";</note>
+      </trans-unit>
+      <trans-unit id="es0-dm-lem.text" xml:space="preserve">
+        <source>ton</source>
+        <target>ton</target>
+        <note>Class = "UILabel"; text = "ton"; ObjectID = "es0-dm-lem";</note>
+      </trans-unit>
+      <trans-unit id="h4e-ee-dpe.text" xml:space="preserve">
+        <source>27</source>
+        <target>27</target>
+        <note>Class = "UILabel"; text = "27"; ObjectID = "h4e-ee-dpe";</note>
+      </trans-unit>
+      <trans-unit id="hBg-9f-fmR.text" xml:space="preserve">
+        <source>593</source>
+        <target>593</target>
+        <note>Class = "UILabel"; text = "593"; ObjectID = "hBg-9f-fmR";</note>
+      </trans-unit>
+      <trans-unit id="jNY-VI-CjE.text" xml:space="preserve">
+        <source>2 февраля, 2022</source>
+        <target>2 февраля, 2022</target>
+        <note>Class = "UILabel"; text = "2 февраля, 2022"; ObjectID = "jNY-VI-CjE";</note>
+      </trans-unit>
+      <trans-unit id="ktl-oE-WTf.text" xml:space="preserve">
+        <source>ton</source>
+        <target>ton</target>
+        <note>Class = "UILabel"; text = "ton"; ObjectID = "ktl-oE-WTf";</note>
+      </trans-unit>
+      <trans-unit id="o3G-7b-TbW.text" xml:space="preserve">
+        <source>Стоимость </source>
+        <target>Стоимость </target>
+        <note>Class = "UILabel"; text = "Стоимость "; ObjectID = "o3G-7b-TbW";</note>
+      </trans-unit>
+      <trans-unit id="ouJ-tp-qMX.text" xml:space="preserve">
+        <source>Нагрузка,</source>
+        <target>Нагрузка,</target>
+        <note>Class = "UILabel"; text = "Нагрузка,"; ObjectID = "ouJ-tp-qMX";</note>
+      </trans-unit>
+      <trans-unit id="qQw-Pg-Jkf.text" xml:space="preserve">
+        <source>Falcon Heavy1</source>
+        <target>Falcon Heavy1</target>
+        <note>Class = "UILabel"; text = "Falcon Heavy1"; ObjectID = "qQw-Pg-Jkf";</note>
+      </trans-unit>
+      <trans-unit id="qa4-tM-sP5.text" xml:space="preserve">
+        <source>308,6</source>
+        <target>308,6</target>
+        <note>Class = "UILabel"; text = "308,6"; ObjectID = "qa4-tM-sP5";</note>
+      </trans-unit>
+      <trans-unit id="swZ-dF-StU.text" xml:space="preserve">
+        <source>140,660</source>
+        <target>140,660</target>
+        <note>Class = "UILabel"; text = "140,660"; ObjectID = "swZ-dF-StU";</note>
+      </trans-unit>
+      <trans-unit id="uUp-Hb-HgN.text" xml:space="preserve">
+        <source>27</source>
+        <target>27</target>
+        <note>Class = "UILabel"; text = "27"; ObjectID = "uUp-Hb-HgN";</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

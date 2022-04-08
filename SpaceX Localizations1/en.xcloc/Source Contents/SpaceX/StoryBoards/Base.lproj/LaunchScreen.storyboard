@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Un-hv-wFb">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Azr-kN-DJj">
+            <objects>
+                <viewController storyboardIdentifier="splashController" id="5Un-hv-wFb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2kJ-oC-BcI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo SpaceX" translatesAutoresizingMaskIntoConstraints="NO" id="9SX-qk-Tm3">
+                                <rect key="frame" x="36" y="398" width="366" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="doe-hw-9EE"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="llm-K8-DE0"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="llm-K8-DE0" firstAttribute="trailing" secondItem="9SX-qk-Tm3" secondAttribute="trailing" constant="12" id="CzD-bd-xFp"/>
+                            <constraint firstItem="9SX-qk-Tm3" firstAttribute="centerY" secondItem="2kJ-oC-BcI" secondAttribute="centerY" id="HbC-GJ-kaP"/>
+                            <constraint firstItem="9SX-qk-Tm3" firstAttribute="leading" secondItem="llm-K8-DE0" secondAttribute="leading" constant="36" id="TTM-Fv-qP9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vRW-Mt-9kf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="180" y="347.53521126760563"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo SpaceX" width="1500" height="500"/>
+    </resources>
+</document>

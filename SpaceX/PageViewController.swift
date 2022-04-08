@@ -47,12 +47,12 @@ class PageViewController: UIPageViewController {
         guard index >= 0 else { return nil }
         guard index < self.newArray.count else { return nil }
         guard let mainVC = storyboard?.instantiateViewController(withIdentifier: "MainVC") as? MainViewController else { return nil }
-        guard let imageData = NetworkManager.shered.fetchImage(from: newArray[index].flickrImages.first!) else { return nil }
-        DispatchQueue.global().async {
-            DispatchQueue.main.async {
-                mainVC.imageRocket.image = UIImage(data: imageData)
-            }
-        }
+//        guard let imageData = NetworkManager.shered.fetchImage(from: newArray[index].flickrImages.first!) else { return nil }
+//        DispatchQueue.global().async {
+//            DispatchQueue.main.async {
+//                mainVC.imageRocket.image = UIImage(data: imageData)
+//            }
+//        }
         
         mainVC.initNameRocket = newArray[index].name
         mainVC.initFirstLaunch = self.formatter.string(from: newArray[index].firstFlight)

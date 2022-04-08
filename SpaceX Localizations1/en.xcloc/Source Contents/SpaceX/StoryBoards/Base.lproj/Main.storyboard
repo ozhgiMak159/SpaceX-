@@ -174,12 +174,12 @@
             </objects>
             <point key="canvasLocation" x="3197" y="-113"/>
         </scene>
-        <!--Имя -->
+        <!--Запуски-->
         <scene sceneID="mGJ-QP-h1W">
             <objects>
                 <collectionViewController id="T5f-fq-BDV" customClass="InfoRocketLaunchCollectionViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="rXB-Td-HhW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="17" minimumInteritemSpacing="10" id="fPN-ld-yga">
@@ -189,7 +189,7 @@
                             <inset key="sectionInset" minX="0.0" minY="60" maxX="10" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="62W-eR-WUb">
-                            <rect key="frame" x="0.0" y="-56" width="320" height="548"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </activityIndicatorView>
@@ -248,12 +248,15 @@
                             <outlet property="delegate" destination="T5f-fq-BDV" id="lou-nX-Z96"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Имя " id="aTK-M2-c6w">
+                    <navigationItem key="navigationItem" title="Запуски" id="aTK-M2-c6w">
                         <barButtonItem key="leftBarButtonItem" title="Назад" id="6GI-bZ-1E0">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="cancel:" destination="T5f-fq-BDV" id="NbP-QA-LHB"/>
                             </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="сор" id="ERM-Hx-xTk">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -262,7 +265,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yNH-9b-WcN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3077" y="656"/>
+            <point key="canvasLocation" x="2243" y="658"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="yzv-m2-xnB">
@@ -753,9 +756,6 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <segue destination="tjR-uu-glB" kind="show" id="cml-Wp-9dX"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ak-b8-GCe">
                                                 <rect key="frame" x="242" y="51" width="56" height="46"/>
@@ -834,7 +834,7 @@
                             </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WUk-2G-aP7"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WUk-2G-aP7" firstAttribute="trailing" secondItem="OaH-PZ-CEC" secondAttribute="trailing" id="CTl-bB-Bbx"/>
                             <constraint firstItem="naB-SY-z2a" firstAttribute="centerX" secondItem="C9n-Px-SbY" secondAttribute="centerX" id="CwG-KD-CFl"/>
@@ -881,29 +881,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3xX-g0-Igc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2243.4375" y="-113.02816901408451"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="AH2-8V-rMa">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tjR-uu-glB" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="mFG-rL-UwH"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mCD-SX-ZyE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.1532291174" green="0.1532291174" blue="0.1532291174" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="T5f-fq-BDV" kind="relationship" relationship="rootViewController" id="Lkk-qR-UVK"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lap-B7-eVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2242.5" y="655.9859154929577"/>
         </scene>
     </scenes>
     <resources>
