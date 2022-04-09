@@ -20,7 +20,6 @@ class MainViewController: UIViewController {
 
     
     var newArrayMain: [ListRockets] = []
-    
     var indexOfNumber = 0
    // var initImage: UIImage!
     var initNameRocket = ""

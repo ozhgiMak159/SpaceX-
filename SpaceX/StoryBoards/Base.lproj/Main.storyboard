@@ -178,7 +178,7 @@
         <scene sceneID="mGJ-QP-h1W">
             <objects>
                 <collectionViewController storyboardIdentifier="InfoVc" id="T5f-fq-BDV" customClass="InfoRocketLaunchCollectionViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="rXB-Td-HhW">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="always" dataMode="prototypes" id="rXB-Td-HhW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -201,17 +201,17 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320.5" height="110"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Np1-qK-ehp">
-                                            <rect key="frame" x="25" y="20" width="124.5" height="60"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Np1-qK-ehp">
+                                            <rect key="frame" x="25" y="25" width="124.5" height="44"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FalconSat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aNk-4K-7CD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="94.5" height="26.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FalconSat" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNk-4K-7CD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="79" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 февраля, 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jNY-VI-CjE">
-                                                    <rect key="frame" x="0.0" y="33.5" width="124.5" height="26.5"/>
+                                                    <rect key="frame" x="0.0" y="22.5" width="124.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -223,7 +223,7 @@
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Np1-qK-ehp" firstAttribute="top" secondItem="jv6-7z-b1M" secondAttribute="top" constant="20" id="Qr2-fH-ceE"/>
+                                        <constraint firstItem="Np1-qK-ehp" firstAttribute="top" secondItem="jv6-7z-b1M" secondAttribute="top" constant="25" id="Qr2-fH-ceE"/>
                                         <constraint firstAttribute="trailing" secondItem="2wA-Ys-k2U" secondAttribute="trailing" constant="20" id="daq-Fl-c8P"/>
                                         <constraint firstItem="2wA-Ys-k2U" firstAttribute="top" secondItem="jv6-7z-b1M" secondAttribute="top" constant="25" id="tfp-mt-ZCz"/>
                                         <constraint firstItem="Np1-qK-ehp" firstAttribute="leading" secondItem="jv6-7z-b1M" secondAttribute="leading" constant="25" id="to9-ZF-3Ug"/>
@@ -248,7 +248,7 @@
                             <outlet property="delegate" destination="T5f-fq-BDV" id="lou-nX-Z96"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Имя " id="aTK-M2-c6w">
+                    <navigationItem key="navigationItem" title="Имя " leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="aTK-M2-c6w">
                         <barButtonItem key="leftBarButtonItem" title="Назад" id="6GI-bZ-1E0">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -262,7 +262,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yNH-9b-WcN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3084" y="656"/>
+            <point key="canvasLocation" x="3082.5" y="655.9859154929577"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="yzv-m2-xnB">
@@ -303,7 +303,7 @@
                                         <rect key="frame" x="0.0" y="-38" width="320" height="800"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jV2-W8-Fod">
-                                        <rect key="frame" x="0.0" y="412" width="320" height="929"/>
+                                        <rect key="frame" x="0.0" y="412" width="320" height="931"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="G3y-MI-IeP">
                                                 <rect key="frame" x="5.5" y="263" width="309" height="114"/>
@@ -888,25 +888,33 @@
         <!--Navigation Controller-->
         <scene sceneID="AH2-8V-rMa">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lap-B7-eVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tjR-uu-glB" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="mFG-rL-UwH"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mCD-SX-ZyE">
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="mFG-rL-UwH"/>
+                    <navigationBar key="navigationBar" alpha="0.0" contentMode="scaleToFill" id="mCD-SX-ZyE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.1532291174" green="0.1532291174" blue="0.1532291174" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" pointSize="23"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
+                        <navigationBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <textAttributes key="titleTextAttributes">
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="T5f-fq-BDV" kind="relationship" relationship="rootViewController" id="Lkk-qR-UVK"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lap-B7-eVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2243" y="656"/>
         </scene>

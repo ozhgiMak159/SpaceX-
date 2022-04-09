@@ -17,18 +17,26 @@ class InfoRocketLaunchCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
-        
         fetchData(Link.rocketLaunches.rawValue)
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        activityIndicator.startAnimating()
+//        activityIndicator.hidesWhenStopped = true
+//        fetchData(Link.rocketLaunches.rawValue)
+//    }
+//
     
  private func fetchData(_ url: String)  {
         NetworkManager.shered.fetchDataList(url) { data in
             self.newArray = data
+            self.newArray.sort(by: { $0.dateUtc > $1.dateUtc })
             self.collectionView.reloadData()
             self.activityIndicator.stopAnimating()
         }
     }
-    
+        
     // MARK: UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return newArray.count
