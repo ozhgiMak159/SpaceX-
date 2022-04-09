@@ -18,7 +18,7 @@ class SettingsViewController: UIViewController {
     
     var name11: String!
     
-    var delegate: UpData?
+   // var delegate: UpData?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,6 @@ class SettingsViewController: UIViewController {
                 name1 = sender.titleForSegment(at: sender.selectedSegmentIndex)
             case 2:
                 name2 = sender.titleForSegment(at: sender.selectedSegmentIndex)
-            
             case 3:
                 name3 = sender.titleForSegment(at: sender.selectedSegmentIndex)
                 //name11 = String(newArray[0].height.meters)
@@ -59,10 +58,8 @@ class SettingsViewController: UIViewController {
      
     }
     
-    
-    
     @IBAction func cancelButton(_ sender: Any) {
-        delegate?.upp(text1: name1, text2: name2, text3: name3, text4: name4, text5: name11)
+      //  delegate?.upp(text1: name1, text2: name2, text3: name3, text4: name4, text5: name11)
         dismiss(animated: true, completion: nil)
     }
     

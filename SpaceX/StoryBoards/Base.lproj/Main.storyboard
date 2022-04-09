@@ -275,7 +275,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehN-ky-OUm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1384" y="-113"/>
+            <point key="canvasLocation" x="1262" y="-113"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="n2x-3Z-QDp">
@@ -765,7 +765,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="setting"/>
                                                 <connections>
-                                                    <segue destination="fWy-Lh-G8b" kind="show" id="yE5-Tq-8q2"/>
+                                                    <segue destination="fWy-Lh-G8b" kind="show" identifier="SettingsVc" id="yE5-Tq-8q2"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Falcon Heavy1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qQw-Pg-Jkf">
@@ -883,7 +883,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3xX-g0-Igc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2243.4375" y="-113.02816901408451"/>
+            <point key="canvasLocation" x="2243" y="-113"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AH2-8V-rMa">
