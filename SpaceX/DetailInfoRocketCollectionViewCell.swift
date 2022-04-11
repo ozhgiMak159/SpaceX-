@@ -9,19 +9,18 @@ import UIKit
 
 class DetailInfoRocketCollectionViewCell: UICollectionViewCell {
     
+    // MARK: - IBOutlet
     @IBOutlet var nameRocket: UILabel!
     @IBOutlet var flightDate: UILabel!
     @IBOutlet var flightResultImage: UIImageView!
     
-    private let formatter: DateFormatter = {
-          let dataForm = DateFormatter()
-          dataForm.locale = .current
-          dataForm.dateStyle = .long
-          return dataForm }()
+    // MARK: - Private propertie
+    private let formatter = Formatter()
     
+    // MARK: - Initialization of cell content
     func one(with data: RocketLaunches) {
         nameRocket.text = data.name
-        flightDate.text = formatter.string(from: data.dateUtc)
+        flightDate.text = formatter.stringToDateVc(date: data.dateUtc)
         
         if let data = data.success {
             if data {

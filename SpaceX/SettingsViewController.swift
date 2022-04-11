@@ -17,45 +17,42 @@ class SettingsViewController: UIViewController {
     
     var newArray: [ListRockets]!
     var delegate: UpDataSettingsDelegate!
-    var one: String!
-    var two: String!
-    var there: String!
-    var four: String!
+    var unitHeight: String!
+    var unitDiameter: String!
+    var unitWeight: String!
+    var unitLoad: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         statesSegmentIndex()
     }
     
-
     private func statesSegmentIndex() {
         segmentHiegh.selectedSegmentIndex = 1
         segmentDiametr.selectedSegmentIndex = 1
         segmentPolza.selectedSegmentIndex = 1
-        one = "ft"
-        two = "ft"
-        there = "kg"
-        four = "lb"
+        unitHeight = "ft"
+        unitDiameter = "ft"
+        unitWeight = "kg"
+        unitLoad = "lb"
     }
     
-    
-   
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
         switch sender.tag {
         case 1:
-            one = segmentHiegh.titleForSegment(at: segmentHiegh.selectedSegmentIndex)
+            unitHeight = segmentHiegh.titleForSegment(at: segmentHiegh.selectedSegmentIndex)
         case 2:
-            two = segmentDiametr.titleForSegment(at: segmentDiametr.selectedSegmentIndex)
+            unitDiameter = segmentDiametr.titleForSegment(at: segmentDiametr.selectedSegmentIndex)
         case 3:
-            there = segmentMass.titleForSegment(at: segmentMass.selectedSegmentIndex)
+            unitWeight = segmentMass.titleForSegment(at: segmentMass.selectedSegmentIndex)
         default:
-            four = segmentPolza.titleForSegment(at: segmentPolza.selectedSegmentIndex)
+            unitLoad = segmentPolza.titleForSegment(at: segmentPolza.selectedSegmentIndex)
         }
     }
     
     
     @IBAction func cancelButton(_ sender: Any) {
-        delegate.setSettings(one, two, there, four)
+        delegate.setSettingsUnits(unitHeight, unitDiameter, unitWeight, unitLoad)
         dismiss(animated: true, completion: nil)
     }
     

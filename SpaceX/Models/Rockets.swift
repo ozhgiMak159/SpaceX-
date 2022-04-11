@@ -7,22 +7,20 @@
 
 import Foundation
 
-
 struct ListRockets: Decodable {
-    let height: Height 
+    let height: Height
     let diameter: Diameter
     let mass: Mass
     let payloadWeights: [PayloadWeights]
     let name: String
-   // let country: String
     let firstFlight: Date
     let firstStage: First
     let secondStage: Second
     let costPerLaunch: Double
     let flickrImages: [String]
     
-    var costResult: Double {
-     return costPerLaunch / 1000000
+    var costResult: String {
+        String(format: "$%.0f млн", costPerLaunch / 1000000)
     }
     
     enum CodingKeys: String, CodingKey {
@@ -31,7 +29,7 @@ struct ListRockets: Decodable {
         case mass
         case payloadWeights = "payload_weights"
         case name
-       // case country
+        // case country
         case firstFlight = "first_flight"
         case firstStage = "first_stage"
         case secondStage = "second_stage"
@@ -72,9 +70,9 @@ struct First: Decodable {
     
     
     enum CodingKeys: String, CodingKey {
-       case engines
-       case fuelAmountTons = "fuel_amount_tons"
-       case burnTimeSec = "burn_time_sec"
+        case engines
+        case fuelAmountTons = "fuel_amount_tons"
+        case burnTimeSec = "burn_time_sec"
     }
     
 }
@@ -87,23 +85,13 @@ struct Second: Decodable {
     
     
     enum CodingKeys: String, CodingKey {
-       case engines
-       case fuelAmountTons = "fuel_amount_tons"
-       case burnTimeSec = "burn_time_sec"
+        case engines
+        case fuelAmountTons = "fuel_amount_tons"
+        case burnTimeSec = "burn_time_sec"
     }
 }
 
-
-/*
- private let numberFormatter: NumberFormatter = {
-     let number = NumberFormatter()
-     number.numberStyle = .currency
-     number.currencyGroupingSeparator = ""
-     
-     number.locale = .current
-     number.maximumFractionDigits = 0
-     
-     return number
-     
- }()
- */
+enum Link: String {
+    case listRocet = "https://api.spacexdata.com/v4/rockets"
+    case rocketLaunches = "https://api.spacexdata.com/v4/launches"
+}

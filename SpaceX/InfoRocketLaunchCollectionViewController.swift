@@ -10,17 +10,22 @@ import UIKit
 class InfoRocketLaunchCollectionViewController: UICollectionViewController {
 
     
-    var newArray: [RocketLaunches] = []
+    // MARK: - IBOutlet
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
+    // MARK: - Public propertie
+    var newArray: [RocketLaunches] = []
+    
+    // MARK: - UICollectionViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
         fetchData(Link.rocketLaunches.rawValue)
     }
-        
- private func fetchData(_ url: String)  {
+    
+    // MARK: - Network
+    private func fetchData(_ url: String)  {
         NetworkManager.shered.fetchDataList(url) { data in
             self.newArray = data
             self.newArray.sort(by: { $0.dateUtc > $1.dateUtc })
@@ -28,12 +33,13 @@ class InfoRocketLaunchCollectionViewController: UICollectionViewController {
             self.activityIndicator.stopAnimating()
         }
     }
-        
-    // MARK: UICollectionViewDataSource
+    
+    
+    // MARK: - UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return newArray.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InfoRocket", for: indexPath) as! DetailInfoRocketCollectionViewCell
         let info = newArray[indexPath.row]
@@ -42,16 +48,16 @@ class InfoRocketLaunchCollectionViewController: UICollectionViewController {
         return cell
     }
     
+    // MARK: - IBAction
     @IBAction func cancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
 }
 
+// MARK: - SettingConstantsForCell
 extension InfoRocketLaunchCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: UIScreen.main.bounds.width - 48, height: 100)
     }
-    
 }

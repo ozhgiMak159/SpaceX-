@@ -7,24 +7,18 @@
 
 import Foundation
 
-enum Link: String {
-    case listRocet = "https://api.spacexdata.com/v4/rockets"
-    case rocketLaunches = "https://api.spacexdata.com/v4/launches"
-}
-
 
 class NetworkManager {
     
     static let shered = NetworkManager()
     private init() {}
     
-
-    func fetchData<T: Decodable>(dataType: T.Type,url: String, with completion: @escaping(T) -> Void) {
+    func fetchData(url: String, with completion: @escaping([ListRockets]) -> Void) {
         guard let ulrString = URL(string: url) else { return }
         
         URLSession.shared.dataTask(with: ulrString) { data, _, error in
             guard let data = data else {
-                print(error?.localizedDescription ?? "1")
+                print(error?.localizedDescription ?? "No description")
                 return
             }
             do {
@@ -32,7 +26,8 @@ class NetworkManager {
                 let dateFormater = DateFormatter()
                 dateFormater.dateFormat = "yyyy-MM-dd"
                 jsonDecoder.dateDecodingStrategy = .formatted(dateFormater)
-                let type = try jsonDecoder.decode(T.self, from: data)
+                
+                let type = try jsonDecoder.decode([ListRockets].self, from: data)
                 DispatchQueue.main.async {
                     completion(type)
                 }
@@ -41,13 +36,13 @@ class NetworkManager {
             }
         }.resume()
         
-}
+    }
+    
     func fetchDataList(_ url: String, with completion: @escaping([RocketLaunches]) -> Void) {
         guard let ulrString = URL(string: url) else { return }
-
         URLSession.shared.dataTask(with: ulrString) { data, _, error in
             guard let data = data else {
-                print(error?.localizedDescription ?? "1")
+                print(error?.localizedDescription ?? "No description")
                 return
             }
             do {
@@ -55,7 +50,7 @@ class NetworkManager {
                 let dateFormater = DateFormatter()
                 dateFormater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.sssZ"
                 jsonDecoder.dateDecodingStrategy = .formatted(dateFormater)
-            
+                
                 let infoRacket = try jsonDecoder.decode([RocketLaunches].self, from: data)
                 DispatchQueue.main.async {
                     completion(infoRacket)
@@ -70,6 +65,5 @@ class NetworkManager {
         guard let stringUrl = url else { return nil }
         guard let imageURL = URL(string: stringUrl) else { return nil }
         return try? Data(contentsOf: imageURL)
-      }
-
+    }
 }

@@ -7,18 +7,20 @@
 
 import UIKit
 protocol UpDataSettingsDelegate {
-    func setSettings(_ height: String, _ diameter: String, _ weight: String, _ load: String )
+    func setSettingsUnits(_ UnitHeight: String, _ UnitDiameter: String, _ UnitWeight: String, _ UnitLoad: String )
+    func setSettingsNumberUnits(_ numberHeight: String, _ numberDiameter: String, _ numberWeight: String, _ numberLoad: String)
 }
 
 class MainViewController: UIViewController {
    
+    // MARK: - IBOutlets
     @IBOutlet var pageControllerRocket: UIPageControl!
     @IBOutlet var scrollViewMain: UIScrollView!
     @IBOutlet var mainView: UIView!
     
     @IBOutlet var imageRocket: UIImageView!
     @IBOutlet var nameRocket: UILabel!
-   
+    
     @IBOutlet var height: UILabel!
     @IBOutlet var unitOfHeight: UILabel!
     
@@ -34,7 +36,7 @@ class MainViewController: UIViewController {
     @IBOutlet var firstLaunch: UILabel!
     @IBOutlet var country: UILabel!
     @IBOutlet var launchCost: UILabel!
-   
+    
     @IBOutlet var numberOfEnginesFirst: UILabel!
     @IBOutlet var fuelQuantityFirst: UILabel!
     @IBOutlet var combustionTimeFirst: UILabel!
@@ -43,9 +45,10 @@ class MainViewController: UIViewController {
     @IBOutlet var fuelQuantitySecond: UILabel!
     @IBOutlet var comdustionTimeSecond: UILabel!
     
+    // MARK: - Public properties
     var newArrayMain: [ListRockets]!
     var currentOfNumber = 0
-   // var initImage: UIImage!
+    var initImage: UIImage!
     var initNameRocket = ""
     var initHeight = ""
     var initDiameter = ""
@@ -61,8 +64,10 @@ class MainViewController: UIViewController {
     var initFuelQuantitySecond = ""
     var initComdustionTimeSecond = ""
     
+    // MARK: - UIViewController Method
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         pageControllerRocket.currentPage = currentOfNumber
         initTitle()
         firstStage()
@@ -70,7 +75,7 @@ class MainViewController: UIViewController {
     }
     
     private func initTitle() {
-        nameRocket.text = initNameRocket 
+        nameRocket.text = initNameRocket
         height.text = initHeight
         diameter.text = initDiameter
         weight.text = initWeight
@@ -92,15 +97,12 @@ class MainViewController: UIViewController {
         comdustionTimeSecond.text = initComdustionTimeSecond
     }
     
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SettingsVc" {
             guard let navigationVC = segue.destination as? UINavigationController else { return }
             guard let settingsVc = navigationVC.topViewController as? SettingsViewController else { return }
             settingsVc.newArray = newArrayMain
-//            settingsVc.one = unitOfHeight.text
-//            settingsVc.two = unitOfDiameter.text
-//            settingsVc.there = unitOfWeight.text
-//            settingsVc.four = unitOfLoad.text
             settingsVc.delegate = self
         } else {
             guard let navigationVC = segue.destination as? UINavigationController else { return }
@@ -111,12 +113,21 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: UpDataSettingsDelegate {
-    func setSettings(_ height: String, _ diameter: String, _ weight: String, _ load: String) {
+    
+    func setSettingsUnits(_ height: String, _ diameter: String, _ weight: String, _ load: String) {
         unitOfHeight.text = height
         unitOfDiameter.text = diameter
         unitOfWeight.text = weight
         unitOfLoad.text = load
     }
+    
+    func setSettingsNumberUnits(_ numberHeight: String, _ numberDiameter: String, _ numberWeight: String, _ numberLoad: String) {
+        height.text = numberHeight
+        diameter.text = numberDiameter
+        weight.text = numberWeight
+        load.text = numberLoad
+    }
+    
 }
 
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B501C84F28040273002AA8B1 /* DataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B501C84E28040273002AA8B1 /* DataFormatter.swift */; };
+		B501C8532804164D002AA8B1 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = B501C8522804164D002AA8B1 /* Image.swift */; };
 		B513811A27F18CD00047C108 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B513811927F18CD00047C108 /* PageViewController.swift */; };
 		B5C25FCF27FFF7E600851DE0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5C25FCD27FFF7E600851DE0 /* Localizable.strings */; };
 		B5FFB64827EC9A450062A245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FFB64727EC9A450062A245 /* AppDelegate.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B501C84E28040273002AA8B1 /* DataFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFormatter.swift; sourceTree = "<group>"; };
+		B501C8522804164D002AA8B1 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		B513811927F18CD00047C108 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		B56C36AD27FED62D00CCEC92 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		B5C25FCE27FFF7E600851DE0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 			children = (
 				B5FFB66227EC9D310062A245 /* Rockets.swift */,
 				B5FFB66427EC9D4D0062A245 /* RocketLaunches.swift */,
+				B501C84E28040273002AA8B1 /* DataFormatter.swift */,
+				B501C8522804164D002AA8B1 /* Image.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5FFB66927EC9EB40062A245 /* MainViewController.swift in Sources */,
+				B501C8532804164D002AA8B1 /* Image.swift in Sources */,
 				B513811A27F18CD00047C108 /* PageViewController.swift in Sources */,
 				B5FFB66B27EC9EC30062A245 /* DetailInfoRocketCollectionViewCell.swift in Sources */,
 				B5FFB66127EC9D050062A245 /* NetworkManager.swift in Sources */,
@@ -213,6 +220,7 @@
 				B5FFB64827EC9A450062A245 /* AppDelegate.swift in Sources */,
 				B5FFB66727EC9DF50062A245 /* InfoRocketLaunchCollectionViewController.swift in Sources */,
 				B5FFB64A27EC9A450062A245 /* SceneDelegate.swift in Sources */,
+				B501C84F28040273002AA8B1 /* DataFormatter.swift in Sources */,
 				B5FFB66327EC9D310062A245 /* Rockets.swift in Sources */,
 				B5FFB66D27EC9ECB0062A245 /* SettingsViewController.swift in Sources */,
 			);
