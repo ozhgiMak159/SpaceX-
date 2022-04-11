@@ -24,7 +24,6 @@ class InfoRocketLaunchCollectionViewController: UICollectionViewController {
         fetchData(Link.rocketLaunches.rawValue)
     }
     
-    // MARK: - Network
     private func fetchData(_ url: String)  {
         NetworkManager.shered.fetchData(dataType: [RocketLaunches].self, url: url, formater: "yyyy-MM-dd'T'HH:mm:ss.sssZ") { data in
             self.newArray = data

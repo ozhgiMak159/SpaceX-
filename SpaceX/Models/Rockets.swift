@@ -11,7 +11,7 @@ struct ListRockets: Decodable {
     let height: Height?
     let diameter: Diameter?
     let mass: Mass?
-    let payloadWeights: [PayloadWeights]?
+    let payloadWeights: [PayloadWeights]
     let firstStage: First?
     let secondStage: Second?
     let name: String?
@@ -27,13 +27,20 @@ struct ListRockets: Decodable {
         flickrImages?.randomElement() ?? ""
     }
     
+//    func add(one: [Double]) -> [Double] {
+//        var new = [Double]()
+//        for i in one {
+//            new.append(i)
+//        }
+//        return new
+//    }
+    
     enum CodingKeys: String, CodingKey {
         case height
         case diameter
         case mass
-        case payloadWeights = "payload_weights"
         case name
-        // case country
+        case payloadWeights = "payload_weights"
         case firstFlight = "first_flight"
         case firstStage = "first_stage"
         case secondStage = "second_stage"

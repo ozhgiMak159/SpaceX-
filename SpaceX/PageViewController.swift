@@ -29,9 +29,7 @@ class PageViewController: UIPageViewController {
             self.pageViewControllerMethod()
         }
     }
-    
-    // "yyyy-MM-dd"
-    
+  
     private func pageViewControllerMethod() {
         guard let startingVc = detaliIndex(index: 0) else { return }
         setViewControllers([startingVc], direction: .forward, animated: true, completion: nil)
@@ -52,7 +50,7 @@ class PageViewController: UIPageViewController {
         mainVC.initHeight = String(newArray[index].height?.feet ?? 0.0)
         mainVC.initDiameter = String(newArray[index].diameter?.feet ?? 0.0)
         mainVC.initWeight = String(newArray[index].mass?.kg ?? 0.0)
-        mainVC.initLoad = String(newArray[index].payloadWeights?.first?.lb ?? 0.0)
+        mainVC.initLoad = String(newArray[index].payloadWeights.first?.lb ?? 0.0)
         mainVC.initNumberOfEnginesFirst = String(newArray[index].firstStage?.engines ?? 0)
         mainVC.initFuelQuantityFirst = String(newArray[index].firstStage?.fuelAmountTons ?? 0.0)
         mainVC.initCombustionTimeFirst = String(newArray[index].firstStage?.fuelAmountTons ?? 0.0)
@@ -63,6 +61,8 @@ class PageViewController: UIPageViewController {
         
         return mainVC
     }
+    
+    
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -79,7 +79,7 @@ extension PageViewController: UIPageViewControllerDataSource {
         
         return detaliIndex(index: mainVc)
 }
-
+    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         var mainVc = (viewController as! MainViewController).currentOfNumber
         mainVc += 1
