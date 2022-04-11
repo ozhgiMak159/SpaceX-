@@ -65,7 +65,7 @@
                                                 </segments>
                                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
-                                                    <action selector="segmentControlAction:" destination="m8g-1f-zZq" eventType="valueChanged" id="Umy-yL-Obk"/>
+                                                    <action selector="segmentAction:" destination="m8g-1f-zZq" eventType="valueChanged" id="8ND-1o-lEx"/>
                                                 </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YwG-me-WvS">
@@ -80,7 +80,7 @@
                                                 </segments>
                                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
-                                                    <action selector="segmentControlAction:" destination="m8g-1f-zZq" eventType="valueChanged" id="BPg-0P-weC"/>
+                                                    <action selector="segmentAction:" destination="m8g-1f-zZq" eventType="valueChanged" id="sOe-oO-9GU"/>
                                                 </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vdi-02-FOZ">
@@ -95,7 +95,7 @@
                                                 </segments>
                                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
-                                                    <action selector="segmentControlAction:" destination="m8g-1f-zZq" eventType="valueChanged" id="RA3-Ix-gt5"/>
+                                                    <action selector="segmentAction:" destination="m8g-1f-zZq" eventType="valueChanged" id="xLr-YZ-oON"/>
                                                 </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jxp-jB-YEU">
@@ -110,7 +110,7 @@
                                                 </segments>
                                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
-                                                    <action selector="segmentControlAction:" destination="m8g-1f-zZq" eventType="valueChanged" id="6Mz-At-f0E"/>
+                                                    <action selector="segmentAction:" destination="m8g-1f-zZq" eventType="valueChanged" id="kxB-Ol-ciP"/>
                                                 </connections>
                                             </segmentedControl>
                                         </subviews>
@@ -143,6 +143,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="segmentDiametr" destination="YwG-me-WvS" id="7lu-ab-aDh"/>
+                        <outlet property="segmentHiegh" destination="OWT-D6-ej1" id="xZj-C6-xWe"/>
+                        <outlet property="segmentMass" destination="Vdi-02-FOZ" id="mBl-au-g6L"/>
+                        <outlet property="segmentPolza" destination="Jxp-jB-YEU" id="HnE-Ac-mqs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wER-XW-pco" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -303,7 +309,7 @@
                                         <rect key="frame" x="0.0" y="-38" width="320" height="800"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jV2-W8-Fod">
-                                        <rect key="frame" x="0.0" y="412" width="320" height="931"/>
+                                        <rect key="frame" x="0.0" y="412" width="320" height="230"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="G3y-MI-IeP">
                                                 <rect key="frame" x="5.5" y="263" width="309" height="114"/>
@@ -600,7 +606,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="qWc-GV-MwO">
-                                                                        <rect key="frame" x="5.5" y="40.5" width="67.5" height="18"/>
+                                                                        <rect key="frame" x="3.5" y="40.5" width="71" height="18"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Масса," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GeH-zR-upY">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="50.5" height="18"/>
@@ -608,8 +614,8 @@
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6os-nQ-0EN">
-                                                                                <rect key="frame" x="54.5" y="0.0" width="13" height="18"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6os-nQ-0EN">
+                                                                                <rect key="frame" x="54.5" y="0.0" width="16.5" height="18"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -888,7 +894,6 @@
         <!--Navigation Controller-->
         <scene sceneID="AH2-8V-rMa">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lap-B7-eVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tjR-uu-glB" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="mFG-rL-UwH"/>
@@ -915,6 +920,7 @@
                         <segue destination="T5f-fq-BDV" kind="relationship" relationship="rootViewController" id="Lkk-qR-UVK"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lap-B7-eVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2243" y="656"/>
         </scene>

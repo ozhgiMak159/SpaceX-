@@ -10,59 +10,74 @@ import UIKit
 class SettingsViewController: UIViewController {
 
     
+    @IBOutlet var segmentHiegh: UISegmentedControl!
+    @IBOutlet var segmentDiametr: UISegmentedControl!
+    @IBOutlet var segmentMass: UISegmentedControl!
+    @IBOutlet var segmentPolza: UISegmentedControl!
+    
     var newArray: [ListRockets]!
-    var name1: String!
-    var name2: String!
-    var name3: String!
-    var name4: String!
+    var delegate: UpDataSettingsDelegate!
+    var one: String!
+    var two: String!
+    var there: String!
+    var four: String!
     
-    var name11: String!
-    
-   // var delegate: UpData?
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        unitName()
-        add()
+        statesSegmentIndex()
     }
     
-    private func add() {
-        name11 = "1"
-    }
-    
-    // подумать над итерацией
-    
-    private func unitName() {
-        self.name1 = "ft"
-        self.name2 = "ft"
-        self.name3 = "lb"
-        self.name4 = "lb"
+
+    private func statesSegmentIndex() {
+        segmentHiegh.selectedSegmentIndex = 1
+        segmentDiametr.selectedSegmentIndex = 1
+        segmentPolza.selectedSegmentIndex = 1
+        one = "ft"
+        two = "ft"
+        there = "kg"
+        four = "lb"
     }
     
     
-    
-    @IBAction func segmentControlAction(_ sender: UISegmentedControl) {
-            switch sender.tag {
-            case 1:
-                name1 = sender.titleForSegment(at: sender.selectedSegmentIndex)
-            case 2:
-                name2 = sender.titleForSegment(at: sender.selectedSegmentIndex)
-            case 3:
-                name3 = sender.titleForSegment(at: sender.selectedSegmentIndex)
-                //name11 = String(newArray[0].height.meters)
-            default:
-                name4 = sender.titleForSegment(at: sender.selectedSegmentIndex)
-                
-            }
-      
-     
+   
+    @IBAction func segmentAction(_ sender: UISegmentedControl) {
+        switch sender.tag {
+        case 1:
+            one = segmentHiegh.titleForSegment(at: segmentHiegh.selectedSegmentIndex)
+        case 2:
+            two = segmentDiametr.titleForSegment(at: segmentDiametr.selectedSegmentIndex)
+        case 3:
+            there = segmentMass.titleForSegment(at: segmentMass.selectedSegmentIndex)
+        default:
+            four = segmentPolza.titleForSegment(at: segmentPolza.selectedSegmentIndex)
+        }
     }
+    
     
     @IBAction func cancelButton(_ sender: Any) {
-      //  delegate?.upp(text1: name1, text2: name2, text3: name3, text4: name4, text5: name11)
+        delegate.setSettings(one, two, there, four)
         dismiss(animated: true, completion: nil)
     }
     
-    
-
 }
+
+
+
+
+
+/*
+ @IBAction func segmentControlAction(_ sender: UISegmentedControl) {
+         switch sender.tag {
+         case 1:
+             name1 = sender.titleForSegment(at: sender.selectedSegmentIndex)
+         case 2:
+             name2 = sender.titleForSegment(at: sender.selectedSegmentIndex)
+         case 3:
+             name3 = sender.titleForSegment(at: sender.selectedSegmentIndex)
+             //name11 = String(newArray[0].height.meters)
+         default:
+             name4 = sender.titleForSegment(at: sender.selectedSegmentIndex)
+             
+         }
+   
+ */

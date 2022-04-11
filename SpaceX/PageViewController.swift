@@ -13,7 +13,6 @@ class PageViewController: UIPageViewController {
     
 
    private var newArray: [ListRockets] = []
-    
    private let countries = [
         NSLocalizedString("Republic of the Marshall Islands", comment: ""),
         NSLocalizedString("United States", comment: ""),
@@ -35,6 +34,7 @@ class PageViewController: UIPageViewController {
             self.pageViewControllerMethod()
             
         }
+        
 }
         
     private func pageViewControllerMethod() {
@@ -60,7 +60,7 @@ class PageViewController: UIPageViewController {
         mainVC.initLaunchCost = String(format: "$%.0f млн", newArray[index].costResult)
         mainVC.initHeight = String(newArray[index].height.feet)
         mainVC.initDiameter = String(newArray[index].diameter.feet)
-        mainVC.initWeight = String(newArray[index].mass.lb)
+        mainVC.initWeight = String(newArray[index].mass.kg)
         mainVC.initLoad = String(newArray[index].payloadWeights.first!.lb)
         mainVC.initNumberOfEnginesFirst = String(newArray[index].firstStage.engines)
         mainVC.initFuelQuantityFirst = String(newArray[index].firstStage.fuelAmountTons ?? 0)
@@ -68,7 +68,7 @@ class PageViewController: UIPageViewController {
         mainVC.initNumberOfEnginesSecond = String(newArray[index].secondStage.engines)
         mainVC.initFuelQuantitySecond = String(newArray[index].secondStage.fuelAmountTons ?? 0)
         mainVC.initComdustionTimeSecond = String(newArray[index].secondStage.burnTimeSec ?? 0)
-        mainVC.indexOfNumber = index
+        mainVC.currentOfNumber = index
         return mainVC
     }
     
@@ -83,7 +83,7 @@ class PageViewController: UIPageViewController {
 extension PageViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
-        var mainVc = (viewController as! MainViewController).indexOfNumber
+        var mainVc = (viewController as! MainViewController).currentOfNumber
         mainVc -= 1
         
         return detaliIndex(index: mainVc)
@@ -91,7 +91,7 @@ extension PageViewController: UIPageViewControllerDataSource {
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
-        var mainVc = (viewController as! MainViewController).indexOfNumber
+        var mainVc = (viewController as! MainViewController).currentOfNumber
         mainVc += 1
         
         return detaliIndex(index: mainVc)

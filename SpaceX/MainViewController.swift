@@ -6,18 +6,12 @@
 //
 
 import UIKit
-
-//protocol UpData {
-//    func upp(text1: String,
-//             text2: String,
-//             text3: String,
-//             text4: String,
-//             text5: String)
-//}
+protocol UpDataSettingsDelegate {
+    func setSettings(_ height: String, _ diameter: String, _ weight: String, _ load: String )
+}
 
 class MainViewController: UIViewController {
    
-        
     @IBOutlet var pageControllerRocket: UIPageControl!
     @IBOutlet var scrollViewMain: UIScrollView!
     @IBOutlet var mainView: UIView!
@@ -49,8 +43,8 @@ class MainViewController: UIViewController {
     @IBOutlet var fuelQuantitySecond: UILabel!
     @IBOutlet var comdustionTimeSecond: UILabel!
     
-    var newArrayMain: [ListRockets] = []
-    var indexOfNumber = 0
+    var newArrayMain: [ListRockets]!
+    var currentOfNumber = 0
    // var initImage: UIImage!
     var initNameRocket = ""
     var initHeight = ""
@@ -69,7 +63,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pageControllerRocket.currentPage = indexOfNumber
+        pageControllerRocket.currentPage = currentOfNumber
         initTitle()
         firstStage()
         secondStage()
@@ -103,31 +97,26 @@ class MainViewController: UIViewController {
             guard let navigationVC = segue.destination as? UINavigationController else { return }
             guard let settingsVc = navigationVC.topViewController as? SettingsViewController else { return }
             settingsVc.newArray = newArrayMain
+//            settingsVc.one = unitOfHeight.text
+//            settingsVc.two = unitOfDiameter.text
+//            settingsVc.there = unitOfWeight.text
+//            settingsVc.four = unitOfLoad.text
+            settingsVc.delegate = self
         } else {
             guard let navigationVC = segue.destination as? UINavigationController else { return }
             guard let infoVc = navigationVC.topViewController as? InfoRocketLaunchCollectionViewController else { return }
             infoVc.title = nameRocket.text
         }
     }
-    
-    
-    
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//            guard let navigationVC = segue.destination as? UINavigationController else { return }
-//            guard let settingsVc = navigationVC.topViewController as? SettingsViewController else { return }
-//            settingsVc.newArray = newArrayMain
-//           // settingsVc.delegate = self
-//        }
-   
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let navigationVC = segue.destination as? UINavigationController else { return }
-//        guard let infoVc = navigationVC.topViewController as? InfoRocketLaunchCollectionViewController else { return }
-//        infoVc.title = nameRocket.text
-//
-//    }
-    
-    
+}
+
+extension MainViewController: UpDataSettingsDelegate {
+    func setSettings(_ height: String, _ diameter: String, _ weight: String, _ load: String) {
+        unitOfHeight.text = height
+        unitOfDiameter.text = diameter
+        unitOfWeight.text = weight
+        unitOfLoad.text = load
+    }
 }
 
 

@@ -19,15 +19,7 @@ class InfoRocketLaunchCollectionViewController: UICollectionViewController {
         activityIndicator.hidesWhenStopped = true
         fetchData(Link.rocketLaunches.rawValue)
     }
-    
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        activityIndicator.startAnimating()
-//        activityIndicator.hidesWhenStopped = true
-//        fetchData(Link.rocketLaunches.rawValue)
-//    }
-//
-    
+        
  private func fetchData(_ url: String)  {
         NetworkManager.shered.fetchDataList(url) { data in
             self.newArray = data
