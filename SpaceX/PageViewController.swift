@@ -13,7 +13,6 @@ class PageViewController: UIPageViewController {
      
     // MARK: - Private properties
     private var formatter = Formatter()
-    private var image = Image()
     private var newArray: [ListRockets] = []
     private let countries = [
         NSLocalizedString("Republic of the Marshall Islands", comment: ""),
@@ -37,29 +36,29 @@ class PageViewController: UIPageViewController {
         dataSource = self
     }
     
+    // Init
     private func detaliIndex(index: Int) -> MainViewController? {
+        guard let mainVC = storyboard?.instantiateViewController(withIdentifier: "MainVC") as? MainViewController else { return nil }
         guard index >= 0 else { return nil }
         guard index < self.newArray.count else { return nil }
-        guard let mainVC = storyboard?.instantiateViewController(withIdentifier: "MainVC") as? MainViewController else { return nil }
-        guard let imageData = NetworkManager.shered.fetchImage(from: newArray[index].flickrImages.last!) else { return nil }
-            DispatchQueue.main.async {
-                mainVC.imageRocket.image = UIImage(data: imageData)
-            }
-        mainVC.initNameRocket = newArray[index].name
+        guard let imageData = NetworkManager.shered.fetchImage(from: newArray[index].randomElementImage) else { return nil }
+        DispatchQueue.main.async { mainVC.imageRocket.image = UIImage(data: imageData) }
+        mainVC.initNameRocket = newArray[index].name ?? "Error: No name"
         mainVC.initFirstLaunch = formatter.stringToDateVc(date: newArray[index].firstFlight)
         mainVC.initCountry = countries[index]
         mainVC.initLaunchCost = newArray[index].costResult
-        mainVC.initHeight = String(newArray[index].height.feet)
-        mainVC.initDiameter = String(newArray[index].diameter.feet)
-        mainVC.initWeight = String(newArray[index].mass.kg)
-        mainVC.initLoad = String(newArray[index].payloadWeights.first!.lb)
-        mainVC.initNumberOfEnginesFirst = String(newArray[index].firstStage.engines)
-        mainVC.initFuelQuantityFirst = String(newArray[index].firstStage.fuelAmountTons ?? 0)
-        mainVC.initCombustionTimeFirst = String(newArray[index].firstStage.fuelAmountTons ?? 0)
-        mainVC.initNumberOfEnginesSecond = String(newArray[index].secondStage.engines)
-        mainVC.initFuelQuantitySecond = String(newArray[index].secondStage.fuelAmountTons ?? 0)
-        mainVC.initComdustionTimeSecond = String(newArray[index].secondStage.burnTimeSec ?? 0)
+        mainVC.initHeight = String(newArray[index].height?.feet ?? 0.0)
+        mainVC.initDiameter = String(newArray[index].diameter?.feet ?? 0.0)
+        mainVC.initWeight = String(newArray[index].mass?.kg ?? 0.0)
+        mainVC.initLoad = String(newArray[index].payloadWeights?.first?.lb ?? 0.0)
+        mainVC.initNumberOfEnginesFirst = String(newArray[index].firstStage?.engines ?? 0)
+        mainVC.initFuelQuantityFirst = String(newArray[index].firstStage?.fuelAmountTons ?? 0.0)
+        mainVC.initCombustionTimeFirst = String(newArray[index].firstStage?.fuelAmountTons ?? 0.0)
+        mainVC.initNumberOfEnginesSecond = String(newArray[index].secondStage?.engines ?? 0)
+        mainVC.initFuelQuantitySecond = String(newArray[index].secondStage?.fuelAmountTons ?? 0.0)
+        mainVC.initComdustionTimeSecond = String(newArray[index].secondStage?.burnTimeSec ?? 0)
         mainVC.currentOfNumber = index
+        
         return mainVC
     }
     
@@ -69,6 +68,7 @@ class PageViewController: UIPageViewController {
         mainVc.newArrayMain = self.newArray
     }
 }
+
     // MARK: - UIPageViewControllerDataSource
 extension PageViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {

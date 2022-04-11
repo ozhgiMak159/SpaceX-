@@ -8,19 +8,23 @@
 import Foundation
 
 struct ListRockets: Decodable {
-    let height: Height
-    let diameter: Diameter
-    let mass: Mass
-    let payloadWeights: [PayloadWeights]
-    let name: String
+    let height: Height?
+    let diameter: Diameter?
+    let mass: Mass?
+    let payloadWeights: [PayloadWeights]?
+    let name: String?
     let firstFlight: Date
-    let firstStage: First
-    let secondStage: Second
-    let costPerLaunch: Double
-    let flickrImages: [String]
+    let firstStage: First?
+    let secondStage: Second?
+    let costPerLaunch: Double?
+    let flickrImages: [String]?
     
     var costResult: String {
-        String(format: "$%.0f млн", costPerLaunch / 1000000)
+        String(format: "$%.0f млн", costPerLaunch ?? 0.0 / 1000000)
+    }
+    
+    var randomElementImage: String {
+        flickrImages?.randomElement() ?? ""
     }
     
     enum CodingKeys: String, CodingKey {
@@ -40,31 +44,31 @@ struct ListRockets: Decodable {
 
 
 struct Height: Decodable {
-    let meters: Double
-    let feet: Double
+    let meters: Double?
+    let feet: Double?
 }
 
 
 struct Diameter: Decodable {
-    let meters: Double
-    let feet: Double
+    let meters: Double?
+    let feet: Double?
 }
 
 
 struct Mass: Decodable {
-    let kg: Double
-    let lb: Double
+    let kg: Double?
+    let lb: Double?
 }
 
 
 struct PayloadWeights: Decodable {
-    let kg: Double
-    let lb: Double
+    let kg: Double?
+    let lb: Double?
 }
 
 
 struct First: Decodable {
-    let engines: Int
+    let engines: Int?
     let fuelAmountTons: Double?
     let burnTimeSec: Int?
     
@@ -79,7 +83,7 @@ struct First: Decodable {
 
 
 struct Second: Decodable {
-    let engines: Int
+    let engines: Int?
     let fuelAmountTons: Double?
     let burnTimeSec: Int?
     
