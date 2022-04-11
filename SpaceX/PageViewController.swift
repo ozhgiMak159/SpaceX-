@@ -24,11 +24,13 @@ class PageViewController: UIPageViewController {
     // MARK: - UIPageViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkManager.shered.fetchData(url: Link.listRocet.rawValue) { data in
+        NetworkManager.shered.fetchData(dataType: [ListRockets].self, url: Link.listRocet.rawValue, formater: "yyyy-MM-dd") { data in
             self.newArray = data
             self.pageViewControllerMethod()
         }
     }
+    
+    // "yyyy-MM-dd"
     
     private func pageViewControllerMethod() {
         guard let startingVc = detaliIndex(index: 0) else { return }
@@ -36,7 +38,7 @@ class PageViewController: UIPageViewController {
         dataSource = self
     }
     
-    // Init
+    // Initialization of properties in MainViewController
     private func detaliIndex(index: Int) -> MainViewController? {
         guard let mainVC = storyboard?.instantiateViewController(withIdentifier: "MainVC") as? MainViewController else { return nil }
         guard index >= 0 else { return nil }

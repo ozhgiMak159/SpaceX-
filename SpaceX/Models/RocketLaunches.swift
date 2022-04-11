@@ -9,7 +9,7 @@ import Foundation
 
 
 struct RocketLaunches: Decodable {
-    let name: String
+    let name: String?
     let success: Bool?
     var dateUtc: Date
     

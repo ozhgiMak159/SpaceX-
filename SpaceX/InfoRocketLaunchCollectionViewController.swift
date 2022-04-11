@@ -26,15 +26,14 @@ class InfoRocketLaunchCollectionViewController: UICollectionViewController {
     
     // MARK: - Network
     private func fetchData(_ url: String)  {
-        NetworkManager.shered.fetchDataList(url) { data in
+        NetworkManager.shered.fetchData(dataType: [RocketLaunches].self, url: url, formater: "yyyy-MM-dd'T'HH:mm:ss.sssZ") { data in
             self.newArray = data
             self.newArray.sort(by: { $0.dateUtc > $1.dateUtc })
             self.collectionView.reloadData()
             self.activityIndicator.stopAnimating()
         }
     }
-    
-    
+
     // MARK: - UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return newArray.count
