@@ -307,6 +307,7 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ракетаТест" translatesAutoresizingMaskIntoConstraints="NO" id="gat-pe-zix">
                                         <rect key="frame" x="0.0" y="-31" width="320" height="297"/>
+                                        <rect key="contentStretch" x="0.0" y="0.14999999999999999" width="1" height="0.90000000000000002"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jV2-W8-Fod">
                                         <rect key="frame" x="0.0" y="173" width="320" height="370"/>
