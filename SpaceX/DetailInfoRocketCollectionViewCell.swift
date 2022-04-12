@@ -15,7 +15,7 @@ class DetailInfoRocketCollectionViewCell: UICollectionViewCell {
     @IBOutlet var flightResultImage: UIImageView!
     
     // MARK: - Private propertie
-    private let formatter = Formatter()
+    private let formatter = Formatters()
     
     // MARK: - Initialization of cell content
     func one(with data: RocketLaunches) {

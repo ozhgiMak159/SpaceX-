@@ -8,7 +8,8 @@
 import UIKit
 protocol UpDataSettingsDelegate {
     func setSettingsUnits(_ UnitHeight: String, _ UnitDiameter: String, _ UnitWeight: String, _ UnitLoad: String )
-    func setSettingsNumberUnits(_ numberHeight: String, _ numberDiameter: String, _ numberWeight: String, _ numberLoad: String)
+    func setSettingsNumberUnits(_ numberHeight: String)
+  //  func setSettingsNumberUnits(for number: ListRockets)
 }
 
 class MainViewController: UIViewController {
@@ -113,7 +114,8 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: UpDataSettingsDelegate {
-    
+   
+       
     func setSettingsUnits(_ height: String, _ diameter: String, _ weight: String, _ load: String) {
         unitOfHeight.text = height
         unitOfDiameter.text = diameter
@@ -121,11 +123,9 @@ extension MainViewController: UpDataSettingsDelegate {
         unitOfLoad.text = load
     }
     
-    func setSettingsNumberUnits(_ numberHeight: String, _ numberDiameter: String, _ numberWeight: String, _ numberLoad: String) {
+    func setSettingsNumberUnits(_ numberHeight: String) {
         height.text = numberHeight
-        diameter.text = numberDiameter
-        weight.text = numberWeight
-        load.text = numberLoad
+       
     }
     
 }

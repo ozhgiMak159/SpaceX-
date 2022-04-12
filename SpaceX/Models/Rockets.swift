@@ -26,15 +26,7 @@ struct ListRockets: Decodable {
     var randomElementImage: String {
         flickrImages?.randomElement() ?? ""
     }
-    
-//    func add(one: [Double]) -> [Double] {
-//        var new = [Double]()
-//        for i in one {
-//            new.append(i)
-//        }
-//        return new
-//    }
-    
+        
     enum CodingKeys: String, CodingKey {
         case height
         case diameter

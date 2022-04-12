@@ -41,26 +41,27 @@ class SettingsViewController: UIViewController {
         switch sender.tag {
         case 1:
             unitHeight = segmentHiegh.titleForSegment(at: segmentHiegh.selectedSegmentIndex)
+            
         case 2:
             unitDiameter = segmentDiametr.titleForSegment(at: segmentDiametr.selectedSegmentIndex)
+           
         case 3:
             unitWeight = segmentMass.titleForSegment(at: segmentMass.selectedSegmentIndex)
+           
         default:
             unitLoad = segmentPolza.titleForSegment(at: segmentPolza.selectedSegmentIndex)
+           
         }
     }
     
     
     @IBAction func cancelButton(_ sender: Any) {
         delegate.setSettingsUnits(unitHeight, unitDiameter, unitWeight, unitLoad)
+        //delegate.setSettingsNumberUnits(one)
         dismiss(animated: true, completion: nil)
     }
     
 }
-
-
-
-
 
 /*
  @IBAction func segmentControlAction(_ sender: UISegmentedControl) {
@@ -76,5 +77,4 @@ class SettingsViewController: UIViewController {
              name4 = sender.titleForSegment(at: sender.selectedSegmentIndex)
              
          }
-   
  */

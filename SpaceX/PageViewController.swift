@@ -12,7 +12,7 @@ import UIKit
 class PageViewController: UIPageViewController {
      
     // MARK: - Private properties
-    private var formatter = Formatter()
+    private var formatter = Formatters()
     private var newArray: [ListRockets] = []
     private let countries = [
         NSLocalizedString("Republic of the Marshall Islands", comment: ""),
@@ -49,20 +49,18 @@ class PageViewController: UIPageViewController {
         mainVC.initLaunchCost = newArray[index].costResult
         mainVC.initHeight = String(newArray[index].height?.feet ?? 0.0)
         mainVC.initDiameter = String(newArray[index].diameter?.feet ?? 0.0)
-        mainVC.initWeight = String(newArray[index].mass?.kg ?? 0.0)
-        mainVC.initLoad = String(newArray[index].payloadWeights.first?.lb ?? 0.0)
+        mainVC.initWeight = String(formatter.numberFormatter(newArray[index].mass?.kg ?? 0))
+        mainVC.initLoad = String(formatter.numberFormatter(newArray[index].payloadWeights.first?.lb ?? 0.0)) // ???????
         mainVC.initNumberOfEnginesFirst = String(newArray[index].firstStage?.engines ?? 0)
         mainVC.initFuelQuantityFirst = String(newArray[index].firstStage?.fuelAmountTons ?? 0.0)
-        mainVC.initCombustionTimeFirst = String(newArray[index].firstStage?.fuelAmountTons ?? 0.0)
+        mainVC.initCombustionTimeFirst = String(newArray[index].firstStage?.burnTimeSec ?? 0)
         mainVC.initNumberOfEnginesSecond = String(newArray[index].secondStage?.engines ?? 0)
         mainVC.initFuelQuantitySecond = String(newArray[index].secondStage?.fuelAmountTons ?? 0.0)
         mainVC.initComdustionTimeSecond = String(newArray[index].secondStage?.burnTimeSec ?? 0)
         mainVC.currentOfNumber = index
-        
+                
         return mainVC
     }
-    
-    
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

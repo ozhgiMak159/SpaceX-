@@ -7,8 +7,8 @@
 
 import Foundation
 
-class Formatter {
-    
+class Formatters {
+    // MARK: - Date Formatter
     func stringToDateVc(date: Date) -> String {
         var stringDate: String
         let dataForm = DateFormatter()
@@ -18,4 +18,13 @@ class Formatter {
         
         return stringDate
     }
+    // MARK: - NumberFormatter
+    func numberFormatter(_ number: Double) -> String {
+        let formatt = NumberFormatter()
+        formatt.numberStyle = .decimal
+        if let result = formatt.string(from: number as NSNumber) { return result }
+        
+        return ""
+    }
 }
+// MARK: -
