@@ -24,7 +24,7 @@ class PageViewController: UIPageViewController {
     // MARK: - UIPageViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkManager.shered.fetchData(dataType: [ListRockets].self, url: Link.listRocet.rawValue, formater: "yyyy-MM-dd") { data in
+        NetworkManager.shered.fetchData(dataType: [ListRockets].self, url: Link.listRocet.rawValue, formaterString: "yyyy-MM-dd") { data in
             self.newArray = data
             self.pageViewControllerMethod()
         }
@@ -43,6 +43,7 @@ class PageViewController: UIPageViewController {
         guard index < self.newArray.count else { return nil }
         guard let imageData = NetworkManager.shered.fetchImage(from: newArray[index].randomElementImage) else { return nil }
         DispatchQueue.main.async { mainVC.imageRocket.image = UIImage(data: imageData) }
+        mainVC.newArrayMain = self.newArray
         mainVC.initNameRocket = newArray[index].name ?? "Error: No name"
         mainVC.initFirstLaunch = formatter.stringToDateVc(date: newArray[index].firstFlight)
         mainVC.initCountry = countries[index]
@@ -67,6 +68,7 @@ class PageViewController: UIPageViewController {
         guard let mainVc = segue.destination as? MainViewController else { return }
         mainVc.newArrayMain = self.newArray
     }
+
 }
 
     // MARK: - UIPageViewControllerDataSource

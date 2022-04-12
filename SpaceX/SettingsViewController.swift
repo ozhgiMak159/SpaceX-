@@ -22,6 +22,11 @@ class SettingsViewController: UIViewController {
     var unitWeight: String!
     var unitLoad: String!
     
+    var unitNumberHeight: String!
+//    var unitNumberDiameter: String!
+//    var unitNumberWeight: String!
+//    var unitNumberLoad: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         statesSegmentIndex()
@@ -35,13 +40,16 @@ class SettingsViewController: UIViewController {
         unitDiameter = "ft"
         unitWeight = "kg"
         unitLoad = "lb"
+        
+        unitNumberHeight = "73.0" // старое значения поставить число из модели данных
     }
+    
     
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
         switch sender.tag {
         case 1:
             unitHeight = segmentHiegh.titleForSegment(at: segmentHiegh.selectedSegmentIndex)
-            
+            unitNumberHeight = String((newArray[0].height?.meters)!) // новое значения
         case 2:
             unitDiameter = segmentDiametr.titleForSegment(at: segmentDiametr.selectedSegmentIndex)
            
@@ -54,10 +62,9 @@ class SettingsViewController: UIViewController {
         }
     }
     
-    
     @IBAction func cancelButton(_ sender: Any) {
         delegate.setSettingsUnits(unitHeight, unitDiameter, unitWeight, unitLoad)
-        //delegate.setSettingsNumberUnits(one)
+        delegate.setSettingsNumberUnits(unitNumberHeight)
         dismiss(animated: true, completion: nil)
     }
     

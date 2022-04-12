@@ -13,7 +13,7 @@ class NetworkManager {
     static let shered = NetworkManager()
     private init() {}
     
-    func fetchData<T: Decodable>(dataType: T.Type, url: String,formater: String, completion: @escaping(T) -> Void) {
+    func fetchData<T: Decodable>(dataType: T.Type, url: String,formaterString: String, completion: @escaping(T) -> Void) {
         guard let ulrString = URL(string: url) else { return }
         
         URLSession.shared.dataTask(with: ulrString) { data, _, error in
@@ -24,15 +24,14 @@ class NetworkManager {
             do {
                 let jsonDecoder = JSONDecoder()
                 let dateFormater = DateFormatter()
-                dateFormater.dateFormat = formater
+                dateFormater.dateFormat = formaterString
                 jsonDecoder.dateDecodingStrategy = .formatted(dateFormater)
-                
                 let type = try jsonDecoder.decode(T.self, from: data)
                 DispatchQueue.main.async {
                     completion(type)
                 }
             } catch {
-                print("Error")
+                print("Error - 🎃")
             }
         }.resume()
         

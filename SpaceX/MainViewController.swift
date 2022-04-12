@@ -17,8 +17,7 @@ class MainViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet var pageControllerRocket: UIPageControl!
     @IBOutlet var scrollViewMain: UIScrollView!
-    @IBOutlet var mainView: UIView!
-    
+
     @IBOutlet var imageRocket: UIImageView!
     @IBOutlet var nameRocket: UILabel!
     
@@ -50,25 +49,24 @@ class MainViewController: UIViewController {
     var newArrayMain: [ListRockets]!
     var currentOfNumber = 0
     var initImage: UIImage!
-    var initNameRocket = ""
-    var initHeight = ""
-    var initDiameter = ""
-    var initWeight = ""
-    var initLoad = ""
-    var initFirstLaunch = ""
-    var initCountry = ""
-    var initLaunchCost = ""
-    var initNumberOfEnginesFirst = ""
-    var initFuelQuantityFirst = ""
-    var initCombustionTimeFirst = ""
-    var initNumberOfEnginesSecond = ""
-    var initFuelQuantitySecond = ""
-    var initComdustionTimeSecond = ""
+    var initNameRocket: String!
+    var initHeight: String!
+    var initDiameter: String!
+    var initWeight: String!
+    var initLoad: String!
+    var initFirstLaunch: String!
+    var initCountry: String!
+    var initLaunchCost: String!
+    var initNumberOfEnginesFirst: String!
+    var initFuelQuantityFirst: String!
+    var initCombustionTimeFirst: String!
+    var initNumberOfEnginesSecond: String!
+    var initFuelQuantitySecond: String!
+    var initComdustionTimeSecond: String!
     
     // MARK: - UIViewController Method
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         pageControllerRocket.currentPage = currentOfNumber
         initTitle()
         firstStage()
@@ -104,6 +102,10 @@ class MainViewController: UIViewController {
             guard let navigationVC = segue.destination as? UINavigationController else { return }
             guard let settingsVc = navigationVC.topViewController as? SettingsViewController else { return }
             settingsVc.newArray = newArrayMain
+//            settingsVc.unitNumberHeight = height.text
+//            settingsVc.unitNumberDiameter = diameter.text
+//            settingsVc.unitNumberWeight = weight.text
+//            settingsVc.unitNumberLoad = load.text
             settingsVc.delegate = self
         } else {
             guard let navigationVC = segue.destination as? UINavigationController else { return }
@@ -115,7 +117,6 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UpDataSettingsDelegate {
    
-       
     func setSettingsUnits(_ height: String, _ diameter: String, _ weight: String, _ load: String) {
         unitOfHeight.text = height
         unitOfDiameter.text = diameter
@@ -125,9 +126,7 @@ extension MainViewController: UpDataSettingsDelegate {
     
     func setSettingsNumberUnits(_ numberHeight: String) {
         height.text = numberHeight
-       
     }
-    
 }
 
 

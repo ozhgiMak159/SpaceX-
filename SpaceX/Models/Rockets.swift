@@ -41,7 +41,6 @@ struct ListRockets: Decodable {
     }
 }
 
-
 struct Height: Decodable {
     let meters: Double?
     let feet: Double?
@@ -77,9 +76,7 @@ struct First: Decodable {
         case fuelAmountTons = "fuel_amount_tons"
         case burnTimeSec = "burn_time_sec"
     }
-    
 }
-
 
 struct Second: Decodable {
     let engines: Int?
