@@ -25,6 +25,7 @@ class PageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NetworkManager.shared.fetchData(dataType: [ListRockets].self, url: Link.listRocket.rawValue, formaterString: "yyyy-MM-dd") { data in
+            
             self.newArray = data
             self.pageViewControllerMethod()
         }
@@ -68,7 +69,6 @@ class PageViewController: UIPageViewController {
         guard let mainVc = segue.destination as? MainViewController else { return }
         mainVc.newArrayMain = self.newArray
     }
-
 }
 
     // MARK: - UIPageViewControllerDataSource

@@ -17,10 +17,10 @@ class SettingsViewController: UIViewController {
     
     var newArray: [ListRockets]!
     var delegate: UpDataSettingsDelegate!
-    var unitHeight = "ft"
-    var unitDiameter = "ft"
-    var unitWeight = "kg"
-    var unitLoad = "lb"
+    private var unitHeight = "ft"
+    private var unitDiameter = "ft"
+    private var unitWeight = "kg"
+    private var unitLoad = "lb"
     var number = 0
     
     var unitNumberHeight: String!
@@ -45,8 +45,8 @@ class SettingsViewController: UIViewController {
     }
     
     private func add(index: Int, sender: UISegmentedControl) {
-        for i in sender {
-        switch i {
+        
+        switch sender.tag {
         case 1:
             unitHeight = segmentHeight.titleForSegment(at: segmentHeight.selectedSegmentIndex) ?? ""
             unitNumberHeight = String((newArray[index].height?.meters)!) // новое значения
@@ -60,7 +60,7 @@ class SettingsViewController: UIViewController {
             unitLoad = segmentLoad.titleForSegment(at: segmentLoad.selectedSegmentIndex) ?? ""
             unitNumberLoad = String(newArray[index].payloadWeights[index].kg!)
         }
-    }
+    
     }
     
     

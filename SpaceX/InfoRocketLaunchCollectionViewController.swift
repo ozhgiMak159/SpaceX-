@@ -13,7 +13,7 @@ class InfoRocketLaunchCollectionViewController: UICollectionViewController {
     // MARK: - IBOutlet
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
-    // MARK: - Public propertie
+    // MARK: - Public property
     var newArray: [RocketLaunches] = []
     
     // MARK: - UICollectionViewController Methods
@@ -35,7 +35,7 @@ class InfoRocketLaunchCollectionViewController: UICollectionViewController {
 
     // MARK: - UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return newArray.count
+        newArray.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -54,7 +54,6 @@ class InfoRocketLaunchCollectionViewController: UICollectionViewController {
 
 // MARK: - SettingConstantsForCell
 extension InfoRocketLaunchCollectionViewController: UICollectionViewDelegateFlowLayout {
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: UIScreen.main.bounds.width - 48, height: 100)
     }

@@ -42,35 +42,27 @@ struct ListRockets: Decodable {
 }
 
 struct Height: Decodable {
-    let meters: Double?
-    let feet: Double?
+    let meters,feet: Double?
 }
 
 
 struct Diameter: Decodable {
-    let meters: Double?
-    let feet: Double?
+    let meters,feet: Double?
 }
-
 
 struct Mass: Decodable {
-    let kg: Double?
-    let lb: Double?
+    let kg,lb: Double?
 }
 
-
 struct PayloadWeights: Decodable {
-    let kg: Double?
-    let lb: Double?
+    let kg,lb: Double?
 }
 
 
 struct First: Decodable {
-    let engines: Int?
+    let engines, burnTimeSec: Int?
     let fuelAmountTons: Double?
-    let burnTimeSec: Int?
-    
-    
+
     enum CodingKeys: String, CodingKey {
         case engines
         case fuelAmountTons = "fuel_amount_tons"
@@ -79,10 +71,8 @@ struct First: Decodable {
 }
 
 struct Second: Decodable {
-    let engines: Int?
+    let engines, burnTimeSec: Int?
     let fuelAmountTons: Double?
-    let burnTimeSec: Int?
-    
     
     enum CodingKeys: String, CodingKey {
         case engines
@@ -91,6 +81,7 @@ struct Second: Decodable {
     }
 }
 
+// MARK: - API
 enum Link: String {
     case listRocket = "https://api.spacexdata.com/v4/rockets"
     case rocketLaunches = "https://api.spacexdata.com/v4/launches"
