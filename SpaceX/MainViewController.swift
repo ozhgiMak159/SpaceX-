@@ -8,8 +8,7 @@
 import UIKit
 protocol UpDataSettingsDelegate {
     func setSettingsUnits(_ UnitHeight: String, _ UnitDiameter: String, _ UnitWeight: String, _ UnitLoad: String )
-    func setSettingsNumberUnits(_ numberHeight: String)
-  //  func setSettingsNumberUnits(for number: ListRockets)
+    func setSettingsNumberUnits(_ numberHeight: String, _ numberDiameter: String, _ numberWeight: String, _ numberLoad: String)
 }
 
 class MainViewController: UIViewController {
@@ -43,7 +42,7 @@ class MainViewController: UIViewController {
     
     @IBOutlet var numberOfEnginesSecond: UILabel!
     @IBOutlet var fuelQuantitySecond: UILabel!
-    @IBOutlet var comdustionTimeSecond: UILabel!
+    @IBOutlet var combustionTimeSecond: UILabel!
     
     // MARK: - Public properties
     var newArrayMain: [ListRockets]!
@@ -62,7 +61,7 @@ class MainViewController: UIViewController {
     var initCombustionTimeFirst: String!
     var initNumberOfEnginesSecond: String!
     var initFuelQuantitySecond: String!
-    var initComdustionTimeSecond: String!
+    var initCombustionTimeSecond: String!
     
     // MARK: - UIViewController Method
     override func viewDidLoad() {
@@ -93,7 +92,7 @@ class MainViewController: UIViewController {
     private func secondStage() {
         numberOfEnginesSecond.text = initNumberOfEnginesSecond
         fuelQuantitySecond.text = initFuelQuantitySecond
-        comdustionTimeSecond.text = initComdustionTimeSecond
+        combustionTimeSecond.text = initCombustionTimeSecond
     }
     
     // MARK: - Navigation
@@ -102,10 +101,6 @@ class MainViewController: UIViewController {
             guard let navigationVC = segue.destination as? UINavigationController else { return }
             guard let settingsVc = navigationVC.topViewController as? SettingsViewController else { return }
             settingsVc.newArray = newArrayMain
-//            settingsVc.unitNumberHeight = height.text
-//            settingsVc.unitNumberDiameter = diameter.text
-//            settingsVc.unitNumberWeight = weight.text
-//            settingsVc.unitNumberLoad = load.text
             settingsVc.delegate = self
         } else {
             guard let navigationVC = segue.destination as? UINavigationController else { return }
@@ -114,9 +109,15 @@ class MainViewController: UIViewController {
         }
     }
 }
-
+// MARK: - Protocol Delegate. До конца не реализован.
 extension MainViewController: UpDataSettingsDelegate {
-   
+    func setSettingsNumberUnits(_ numberHeight: String, _ numberDiameter: String, _ numberWeight: String, _ numberLoad: String) {
+        height.text = numberHeight
+        diameter.text = numberDiameter
+        weight.text = numberWeight
+        load.text = numberLoad
+    }
+    
     func setSettingsUnits(_ height: String, _ diameter: String, _ weight: String, _ load: String) {
         unitOfHeight.text = height
         unitOfDiameter.text = diameter
@@ -124,9 +125,6 @@ extension MainViewController: UpDataSettingsDelegate {
         unitOfLoad.text = load
     }
     
-    func setSettingsNumberUnits(_ numberHeight: String) {
-        height.text = numberHeight
-    }
 }
 
 

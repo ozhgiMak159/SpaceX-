@@ -92,6 +92,6 @@ struct Second: Decodable {
 }
 
 enum Link: String {
-    case listRocet = "https://api.spacexdata.com/v4/rockets"
+    case listRocket = "https://api.spacexdata.com/v4/rockets"
     case rocketLaunches = "https://api.spacexdata.com/v4/launches"
 }

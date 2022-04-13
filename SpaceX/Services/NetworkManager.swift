@@ -10,13 +10,13 @@ import Foundation
 
 class NetworkManager {
     
-    static let shered = NetworkManager()
+    static let shared = NetworkManager()
     private init() {}
     
     func fetchData<T: Decodable>(dataType: T.Type, url: String,formaterString: String, completion: @escaping(T) -> Void) {
-        guard let ulrString = URL(string: url) else { return }
+        guard let urlString = URL(string: url) else { return }
         
-        URLSession.shared.dataTask(with: ulrString) { data, _, error in
+        URLSession.shared.dataTask(with: urlString) { data, _, error in
             guard let data = data else {
                 print(error?.localizedDescription ?? "No description")
                 return

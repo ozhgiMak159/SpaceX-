@@ -10,22 +10,23 @@ import UIKit
 class SettingsViewController: UIViewController {
 
     
-    @IBOutlet var segmentHiegh: UISegmentedControl!
+    @IBOutlet var segmentHeight: UISegmentedControl!
     @IBOutlet var segmentDiametr: UISegmentedControl!
     @IBOutlet var segmentMass: UISegmentedControl!
-    @IBOutlet var segmentPolza: UISegmentedControl!
+    @IBOutlet var segmentLoad: UISegmentedControl!
     
     var newArray: [ListRockets]!
     var delegate: UpDataSettingsDelegate!
-    var unitHeight: String!
-    var unitDiameter: String!
-    var unitWeight: String!
-    var unitLoad: String!
+    var unitHeight = "ft"
+    var unitDiameter = "ft"
+    var unitWeight = "kg"
+    var unitLoad = "lb"
+    var number = 0
     
     var unitNumberHeight: String!
-//    var unitNumberDiameter: String!
-//    var unitNumberWeight: String!
-//    var unitNumberLoad: String!
+    var unitNumberDiameter: String!
+    var unitNumberWeight: String!
+    var unitNumberLoad: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,55 +34,49 @@ class SettingsViewController: UIViewController {
     }
     
     private func statesSegmentIndex() {
-        segmentHiegh.selectedSegmentIndex = 1
+        segmentHeight.selectedSegmentIndex = 1
         segmentDiametr.selectedSegmentIndex = 1
-        segmentPolza.selectedSegmentIndex = 1
-        unitHeight = "ft"
-        unitDiameter = "ft"
-        unitWeight = "kg"
-        unitLoad = "lb"
-        
-        unitNumberHeight = "73.0" // старое значения поставить число из модели данных
+        segmentLoad.selectedSegmentIndex = 1
+//----------------------------------------------------------------------------------------------------------------------------------------
+        unitNumberHeight = String((newArray[0].height?.feet)!) // старое значения поставить число из модели данных
+        unitNumberDiameter = String((newArray[0].diameter?.feet)!)
+        unitNumberWeight = String((newArray[0].mass?.kg)!)
+        unitNumberLoad = String(newArray[0].payloadWeights[0].lb!)
+    }
+    
+    private func add(index: Int, sender: UISegmentedControl) {
+        for i in sender {
+        switch i {
+        case 1:
+            unitHeight = segmentHeight.titleForSegment(at: segmentHeight.selectedSegmentIndex) ?? ""
+            unitNumberHeight = String((newArray[index].height?.meters)!) // новое значения
+        case 2:
+            unitDiameter = segmentDiametr.titleForSegment(at: segmentDiametr.selectedSegmentIndex) ?? ""
+            unitNumberDiameter = String((newArray[index].diameter?.meters)!)
+        case 3:
+            unitWeight = segmentMass.titleForSegment(at: segmentMass.selectedSegmentIndex) ?? ""
+            unitNumberWeight = String((newArray[index].mass?.lb)!)
+        default:
+            unitLoad = segmentLoad.titleForSegment(at: segmentLoad.selectedSegmentIndex) ?? ""
+            unitNumberLoad = String(newArray[index].payloadWeights[index].kg!)
+        }
+    }
     }
     
     
+    
+    
+    
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
-        switch sender.tag {
-        case 1:
-            unitHeight = segmentHiegh.titleForSegment(at: segmentHiegh.selectedSegmentIndex)
-            unitNumberHeight = String((newArray[0].height?.meters)!) // новое значения
-        case 2:
-            unitDiameter = segmentDiametr.titleForSegment(at: segmentDiametr.selectedSegmentIndex)
-           
-        case 3:
-            unitWeight = segmentMass.titleForSegment(at: segmentMass.selectedSegmentIndex)
-           
-        default:
-            unitLoad = segmentPolza.titleForSegment(at: segmentPolza.selectedSegmentIndex)
-           
-        }
+        add(index: 0, sender: sender)
     }
     
     @IBAction func cancelButton(_ sender: Any) {
         delegate.setSettingsUnits(unitHeight, unitDiameter, unitWeight, unitLoad)
-        delegate.setSettingsNumberUnits(unitNumberHeight)
+        delegate.setSettingsNumberUnits(unitNumberHeight, unitNumberDiameter, unitNumberWeight, unitNumberLoad)
         dismiss(animated: true, completion: nil)
     }
     
 }
 
-/*
- @IBAction func segmentControlAction(_ sender: UISegmentedControl) {
-         switch sender.tag {
-         case 1:
-             name1 = sender.titleForSegment(at: sender.selectedSegmentIndex)
-         case 2:
-             name2 = sender.titleForSegment(at: sender.selectedSegmentIndex)
-         case 3:
-             name3 = sender.titleForSegment(at: sender.selectedSegmentIndex)
-             //name11 = String(newArray[0].height.meters)
-         default:
-             name4 = sender.titleForSegment(at: sender.selectedSegmentIndex)
-             
-         }
- */
+

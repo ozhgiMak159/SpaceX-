@@ -145,9 +145,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="segmentDiametr" destination="YwG-me-WvS" id="7lu-ab-aDh"/>
-                        <outlet property="segmentHiegh" destination="OWT-D6-ej1" id="xZj-C6-xWe"/>
+                        <outlet property="segmentHeight" destination="OWT-D6-ej1" id="xZj-C6-xWe"/>
+                        <outlet property="segmentLoad" destination="Jxp-jB-YEU" id="HnE-Ac-mqs"/>
                         <outlet property="segmentMass" destination="Vdi-02-FOZ" id="mBl-au-g6L"/>
-                        <outlet property="segmentPolza" destination="Jxp-jB-YEU" id="HnE-Ac-mqs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wER-XW-pco" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -865,7 +865,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="combustionTimeFirst" destination="Ja1-KB-yuI" id="hnt-HC-a12"/>
-                        <outlet property="comdustionTimeSecond" destination="hBg-9f-fmR" id="gYV-qX-wM6"/>
+                        <outlet property="combustionTimeSecond" destination="hBg-9f-fmR" id="gYV-qX-wM6"/>
                         <outlet property="country" destination="aDP-RV-9Gb" id="N9r-dw-wlx"/>
                         <outlet property="diameter" destination="XK3-0y-FlO" id="fx1-YX-35s"/>
                         <outlet property="firstLaunch" destination="QMf-vF-hzi" id="2Ab-2J-ywT"/>

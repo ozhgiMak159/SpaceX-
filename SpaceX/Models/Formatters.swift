@@ -20,9 +20,9 @@ class Formatters {
     }
     // MARK: - NumberFormatter
     func numberFormatter(_ number: Double) -> String {
-        let formatt = NumberFormatter()
-        formatt.numberStyle = .decimal
-        if let result = formatt.string(from: number as NSNumber) { return result }
+        let format = NumberFormatter()
+        format.numberStyle = .decimal
+        if let result = format.string(from: number as NSNumber) { return result }
         
         return ""
     }

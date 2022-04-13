@@ -24,24 +24,24 @@ class PageViewController: UIPageViewController {
     // MARK: - UIPageViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkManager.shered.fetchData(dataType: [ListRockets].self, url: Link.listRocet.rawValue, formaterString: "yyyy-MM-dd") { data in
+        NetworkManager.shared.fetchData(dataType: [ListRockets].self, url: Link.listRocket.rawValue, formaterString: "yyyy-MM-dd") { data in
             self.newArray = data
             self.pageViewControllerMethod()
         }
     }
   
     private func pageViewControllerMethod() {
-        guard let startingVc = detaliIndex(index: 0) else { return }
+        guard let startingVc = detailedIndex(index: 0) else { return }
         setViewControllers([startingVc], direction: .forward, animated: true, completion: nil)
         dataSource = self
     }
     
     // Initialization of properties in MainViewController
-    private func detaliIndex(index: Int) -> MainViewController? {
+    private func detailedIndex(index: Int) -> MainViewController? {
         guard let mainVC = storyboard?.instantiateViewController(withIdentifier: "MainVC") as? MainViewController else { return nil }
         guard index >= 0 else { return nil }
         guard index < self.newArray.count else { return nil }
-        guard let imageData = NetworkManager.shered.fetchImage(from: newArray[index].randomElementImage) else { return nil }
+        guard let imageData = NetworkManager.shared.fetchImage(from: newArray[index].randomElementImage) else { return nil }
         DispatchQueue.main.async { mainVC.imageRocket.image = UIImage(data: imageData) }
         mainVC.newArrayMain = self.newArray
         mainVC.initNameRocket = newArray[index].name ?? "Error: No name"
@@ -57,7 +57,7 @@ class PageViewController: UIPageViewController {
         mainVC.initCombustionTimeFirst = String(newArray[index].firstStage?.burnTimeSec ?? 0)
         mainVC.initNumberOfEnginesSecond = String(newArray[index].secondStage?.engines ?? 0)
         mainVC.initFuelQuantitySecond = String(newArray[index].secondStage?.fuelAmountTons ?? 0.0)
-        mainVC.initComdustionTimeSecond = String(newArray[index].secondStage?.burnTimeSec ?? 0)
+        mainVC.initCombustionTimeSecond = String(newArray[index].secondStage?.burnTimeSec ?? 0)
         mainVC.currentOfNumber = index
                 
         return mainVC
@@ -77,13 +77,13 @@ extension PageViewController: UIPageViewControllerDataSource {
         var mainVc = (viewController as! MainViewController).currentOfNumber
         mainVc -= 1
         
-        return detaliIndex(index: mainVc)
+        return detailedIndex(index: mainVc)
 }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         var mainVc = (viewController as! MainViewController).currentOfNumber
         mainVc += 1
         
-        return detaliIndex(index: mainVc)
+        return detailedIndex(index: mainVc)
     }
 }
