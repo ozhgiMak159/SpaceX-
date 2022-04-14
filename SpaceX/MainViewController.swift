@@ -8,7 +8,7 @@
 import UIKit
 protocol UpDataSettingsDelegate {
     func setSettingsUnits(_ UnitHeight: String, _ UnitDiameter: String, _ UnitWeight: String, _ UnitLoad: String )
-    func setSettingsNumberUnits(_ numberHeight: String, _ numberDiameter: String, _ numberWeight: String, _ numberLoad: String)
+   // func setSettingsNumberUnits(_ numberHeight: String, _ numberDiameter: String, _ numberWeight: String, _ numberLoad: String)
 }
 
 class MainViewController: UIViewController {
@@ -70,6 +70,14 @@ class MainViewController: UIViewController {
         initTitle()
         firstStage()
         secondStage()
+        startPresentUnit()
+    }
+    
+    private func startPresentUnit() {
+        unitOfHeight.text = "ft"
+        unitOfWeight.text = "kg"
+        unitOfDiameter.text = "ft"
+        unitOfLoad.text = "lb"
     }
     
     private func initTitle() {
@@ -111,20 +119,12 @@ class MainViewController: UIViewController {
 }
 // MARK: - Protocol Delegate. До конца не реализован.
 extension MainViewController: UpDataSettingsDelegate {
-    func setSettingsNumberUnits(_ numberHeight: String, _ numberDiameter: String, _ numberWeight: String, _ numberLoad: String) {
-        height.text = numberHeight
-        diameter.text = numberDiameter
-        weight.text = numberWeight
-        load.text = numberLoad
-    }
-    
     func setSettingsUnits(_ height: String, _ diameter: String, _ weight: String, _ load: String) {
         unitOfHeight.text = height
         unitOfDiameter.text = diameter
         unitOfWeight.text = weight
         unitOfLoad.text = load
     }
-    
 }
 
 
