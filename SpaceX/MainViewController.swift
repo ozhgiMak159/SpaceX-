@@ -8,7 +8,7 @@
 import UIKit
 protocol UpDataSettingsDelegate {
     func setSettingsUnits(_ UnitHeight: String, _ UnitDiameter: String, _ UnitWeight: String, _ UnitLoad: String )
-   // func setSettingsNumberUnits(_ numberHeight: String, _ numberDiameter: String, _ numberWeight: String, _ numberLoad: String)
+//    func setSettingsNumberUnits(_ numberHeight: String, _ numberDiameter: String, _ numberWeight: String, _ numberLoad: String)
 }
 
 class MainViewController: UIViewController {
@@ -71,6 +71,27 @@ class MainViewController: UIViewController {
         firstStage()
         secondStage()
         startPresentUnit()
+        saveUnit()
+    }
+    
+    private func saveUnit() {
+        
+        guard let one = UserDefaults.standard.string(forKey: "unitHeight") else { return }
+        unitOfHeight.text = one
+        UserDefaults.standard.removeObject(forKey: "unitHeight")
+        
+        guard let two = UserDefaults.standard.string(forKey: "unitDiameter") else { return }
+        unitOfDiameter.text = two
+        UserDefaults.standard.removeObject(forKey: "unitDiameter")
+
+        guard let there = UserDefaults.standard.string(forKey: "unitWeight") else { return }
+        unitOfWeight.text = there
+        UserDefaults.standard.removeObject(forKey: "unitWeight")
+
+        guard let four = UserDefaults.standard.string(forKey: "unitLoad") else { return }
+        unitOfLoad.text = four
+        UserDefaults.standard.removeObject(forKey: "unitLoad")
+        
     }
     
     private func startPresentUnit() {
@@ -119,6 +140,11 @@ class MainViewController: UIViewController {
 }
 // MARK: - Protocol Delegate. До конца не реализован.
 extension MainViewController: UpDataSettingsDelegate {
+    
+//    func setSettingsNumberUnits(_ numberHeight: String, _ numberDiameter: String, _ numberWeight: String, _ numberLoad: String) {
+//        <#code#>
+//    }
+    
     func setSettingsUnits(_ height: String, _ diameter: String, _ weight: String, _ load: String) {
         unitOfHeight.text = height
         unitOfDiameter.text = diameter
