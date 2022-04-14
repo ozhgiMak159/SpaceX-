@@ -26,29 +26,8 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         statesSegmentIndex()
-        saveUnit()
     }
     
-    private func saveUnit() {
-        
-         UserDefaults.standard.string(forKey: "unitHeight")
-       // unitOfHeight.text = one
-        UserDefaults.standard.removeObject(forKey: "unitHeight")
-        
-         UserDefaults.standard.string(forKey: "unitDiameter")
-       // unitOfDiameter.text = two
-        UserDefaults.standard.removeObject(forKey: "unitDiameter")
-
-        UserDefaults.standard.string(forKey: "unitWeight")
-       // unitOfWeight.text = there
-        UserDefaults.standard.removeObject(forKey: "unitWeight")
-
-         UserDefaults.standard.string(forKey: "unitLoad")
-       // unitOfLoad.text = four
-        UserDefaults.standard.removeObject(forKey: "unitLoad")
-        
-    }
-
     private func statesSegmentIndex() {
         segmentHeight.selectedSegmentIndex = 1
         segmentDiametr.selectedSegmentIndex = 1
