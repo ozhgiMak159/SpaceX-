@@ -14,7 +14,7 @@ class DetailInfoRocketCollectionViewCell: UICollectionViewCell {
     @IBOutlet var flightDate: UILabel!
     @IBOutlet var flightResultImage: UIImageView!
     
-    // MARK: - Private propertie
+    // MARK: - Private property
     private let formatter = Formatters()
     
     // MARK: - Initialization of cell content

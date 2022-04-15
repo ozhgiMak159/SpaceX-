@@ -10,6 +10,7 @@
 		B501C84F28040273002AA8B1 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B501C84E28040273002AA8B1 /* Formatters.swift */; };
 		B513811A27F18CD00047C108 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B513811927F18CD00047C108 /* PageViewController.swift */; };
 		B5C25FCF27FFF7E600851DE0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5C25FCD27FFF7E600851DE0 /* Localizable.strings */; };
+		B5C5E5152809321300463419 /* KeyUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C5E5142809321300463419 /* KeyUserDefaults.swift */; };
 		B5FFB64827EC9A450062A245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FFB64727EC9A450062A245 /* AppDelegate.swift */; };
 		B5FFB64A27EC9A450062A245 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FFB64927EC9A450062A245 /* SceneDelegate.swift */; };
 		B5FFB64F27EC9A450062A245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5FFB64D27EC9A450062A245 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		B513811927F18CD00047C108 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		B56C36AD27FED62D00CCEC92 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		B5C25FCE27FFF7E600851DE0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B5C5E5142809321300463419 /* KeyUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyUserDefaults.swift; sourceTree = "<group>"; };
 		B5FFB64427EC9A450062A245 /* SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FFB64727EC9A450062A245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5FFB64927EC9A450062A245 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,8 +82,6 @@
 				B5FFB65F27EC9CB20062A245 /* ViewControllers */,
 				B5FFB65C27EC9C2A0062A245 /* StoryBoards */,
 				B5FFB65B27EC9C170062A245 /* App */,
-				B5FFB65527EC9A460062A245 /* Info.plist */,
-				B5C25FCD27FFF7E600851DE0 /* Localizable.strings */,
 			);
 			path = SpaceX;
 			sourceTree = "<group>";
@@ -89,6 +89,8 @@
 		B5FFB65B27EC9C170062A245 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				B5C25FCD27FFF7E600851DE0 /* Localizable.strings */,
+				B5FFB65527EC9A460062A245 /* Info.plist */,
 				B5FFB65027EC9A460062A245 /* Assets.xcassets */,
 				B5FFB64927EC9A450062A245 /* SceneDelegate.swift */,
 				B5FFB64727EC9A450062A245 /* AppDelegate.swift */,
@@ -119,6 +121,7 @@
 				B5FFB66227EC9D310062A245 /* Rockets.swift */,
 				B5FFB66427EC9D4D0062A245 /* RocketLaunches.swift */,
 				B501C84E28040273002AA8B1 /* Formatters.swift */,
+				B5C5E5142809321300463419 /* KeyUserDefaults.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			files = (
 				B5FFB66927EC9EB40062A245 /* MainViewController.swift in Sources */,
 				B513811A27F18CD00047C108 /* PageViewController.swift in Sources */,
+				B5C5E5152809321300463419 /* KeyUserDefaults.swift in Sources */,
 				B5FFB66B27EC9EC30062A245 /* DetailInfoRocketCollectionViewCell.swift in Sources */,
 				B5FFB66127EC9D050062A245 /* NetworkManager.swift in Sources */,
 				B5FFB66527EC9D4D0062A245 /* RocketLaunches.swift in Sources */,
@@ -380,7 +384,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GQU4PC2XPJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SpaceX/Info.plist;
+				INFOPLIST_FILE = SpaceX/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -408,7 +412,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GQU4PC2XPJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SpaceX/Info.plist;
+				INFOPLIST_FILE = SpaceX/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -25,9 +25,9 @@ class PageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NetworkManager.shared.fetchData(dataType: [ListRockets].self, url: Link.listRocket.rawValue, formaterString: "yyyy-MM-dd") { data in
-            
             self.newArray = data
             self.pageViewControllerMethod()
+            self.dataTransmission()
         }
     }
   
@@ -37,7 +37,7 @@ class PageViewController: UIPageViewController {
         dataSource = self
     }
     
-    // Initialization of properties in MainViewController
+    // MARK: - Initialization of properties in MainViewController
     private func detailedIndex(index: Int) -> MainViewController? {
         guard let mainVC = storyboard?.instantiateViewController(withIdentifier: "MainVC") as? MainViewController else { return nil }
         guard index >= 0 else { return nil }
@@ -52,7 +52,7 @@ class PageViewController: UIPageViewController {
         mainVC.initHeight = String(newArray[index].height?.feet ?? 0.0)
         mainVC.initDiameter = String(newArray[index].diameter?.feet ?? 0.0)
         mainVC.initWeight = String(formatter.numberFormatter(newArray[index].mass?.kg ?? 0))
-        mainVC.initLoad = String(formatter.numberFormatter(newArray[index].payloadWeights.first?.lb ?? 0.0)) // ???????
+        mainVC.initLoad = String(formatter.numberFormatter(newArray[index].payloadWeights.first?.lb ?? 0.0)) 
         mainVC.initNumberOfEnginesFirst = String(newArray[index].firstStage?.engines ?? 0)
         mainVC.initFuelQuantityFirst = String(newArray[index].firstStage?.fuelAmountTons ?? 0.0)
         mainVC.initCombustionTimeFirst = String(newArray[index].firstStage?.burnTimeSec ?? 0)
@@ -60,15 +60,15 @@ class PageViewController: UIPageViewController {
         mainVC.initFuelQuantitySecond = String(newArray[index].secondStage?.fuelAmountTons ?? 0.0)
         mainVC.initCombustionTimeSecond = String(newArray[index].secondStage?.burnTimeSec ?? 0)
         mainVC.currentOfNumber = index
-                
         return mainVC
     }
     
     // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let mainVc = segue.destination as? MainViewController else { return }
-        mainVc.newArrayMain = self.newArray
+    func dataTransmission() {
+    guard let mainVC = storyboard?.instantiateViewController(withIdentifier: "MainVC") as? MainViewController else { return }
+        mainVC.newArrayMain = self.newArray
     }
+    
 }
 
     // MARK: - UIPageViewControllerDataSource

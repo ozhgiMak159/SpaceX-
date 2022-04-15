@@ -8,7 +8,6 @@
 import UIKit
 protocol UpDataSettingsDelegate {
     func setSettingsUnits(_ UnitHeight: String, _ UnitDiameter: String, _ UnitWeight: String, _ UnitLoad: String )
-//    func setSettingsNumberUnits(_ numberHeight: String, _ numberDiameter: String, _ numberWeight: String, _ numberLoad: String)
 }
 
 class MainViewController: UIViewController {
@@ -76,21 +75,21 @@ class MainViewController: UIViewController {
     
     private func saveUnit() {
         
-        guard let one = UserDefaults.standard.string(forKey: "unitHeight") else { return }
-        unitOfHeight.text = one
-        UserDefaults.standard.removeObject(forKey: "unitHeight")
+        guard let heightKey = UserDefaults.standard.string(forKey: Key.keyHeight.rawValue) else { return }
+        unitOfHeight.text = heightKey
+        UserDefaults.standard.removeObject(forKey: Key.keyHeight.rawValue)
         
-        guard let two = UserDefaults.standard.string(forKey: "unitDiameter") else { return }
-        unitOfDiameter.text = two
-        UserDefaults.standard.removeObject(forKey: "unitDiameter")
+        guard let weightKey = UserDefaults.standard.string(forKey: Key.keyDiameter.rawValue) else { return }
+        unitOfDiameter.text = weightKey
+        UserDefaults.standard.removeObject(forKey: Key.keyDiameter.rawValue)
 
-        guard let there = UserDefaults.standard.string(forKey: "unitWeight") else { return }
-        unitOfWeight.text = there
-        UserDefaults.standard.removeObject(forKey: "unitWeight")
+        guard let diameterKey = UserDefaults.standard.string(forKey: Key.keyWeight.rawValue) else { return }
+        unitOfWeight.text = diameterKey
+        UserDefaults.standard.removeObject(forKey: Key.keyWeight.rawValue)
 
-        guard let four = UserDefaults.standard.string(forKey: "unitLoad") else { return }
-        unitOfLoad.text = four
-        UserDefaults.standard.removeObject(forKey: "unitLoad")
+        guard let loadKey = UserDefaults.standard.string(forKey: Key.keyLoad.rawValue) else { return }
+        unitOfLoad.text = loadKey
+        UserDefaults.standard.removeObject(forKey: Key.keyLoad.rawValue)
         
     }
     
@@ -138,13 +137,8 @@ class MainViewController: UIViewController {
         }
     }
 }
-// MARK: - Protocol Delegate. До конца не реализован.
+// MARK: - Protocol Delegate. Прием и отображения численных единиц измерения до конца не реализованы.
 extension MainViewController: UpDataSettingsDelegate {
-    
-//    func setSettingsNumberUnits(_ numberHeight: String, _ numberDiameter: String, _ numberWeight: String, _ numberLoad: String) {
-//        <#code#>
-//    }
-    
     func setSettingsUnits(_ height: String, _ diameter: String, _ weight: String, _ load: String) {
         unitOfHeight.text = height
         unitOfDiameter.text = diameter

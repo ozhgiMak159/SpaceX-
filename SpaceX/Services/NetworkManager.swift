@@ -13,6 +13,7 @@ class NetworkManager {
     static let shared = NetworkManager()
     private init() {}
     
+    // MARK: - Loading data from API
     func fetchData<T: Decodable>(dataType: T.Type, url: String,formaterString: String, completion: @escaping(T) -> Void) {
         guard let urlString = URL(string: url) else { return }
         
@@ -36,7 +37,7 @@ class NetworkManager {
         }.resume()
         
     }
-    
+    // MARK: - Uploading images from API
     func fetchImage(from url: String?) -> Data? {
         guard let stringUrl = url else { return nil }
         guard let imageURL = URL(string: stringUrl) else { return nil }

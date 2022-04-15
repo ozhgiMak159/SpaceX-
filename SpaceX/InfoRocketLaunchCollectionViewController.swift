@@ -42,7 +42,6 @@ class InfoRocketLaunchCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InfoRocket", for: indexPath) as! DetailInfoRocketCollectionViewCell
         let info = newArray[indexPath.row]
         cell.one(with: info)
-        
         return cell
     }
     

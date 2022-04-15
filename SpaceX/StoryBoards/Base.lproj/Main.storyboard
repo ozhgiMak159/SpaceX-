@@ -65,7 +65,7 @@
                                                 </segments>
                                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
-                                                    <action selector="segmentAction:" destination="m8g-1f-zZq" eventType="valueChanged" id="K6V-MJ-e9o"/>
+                                                    <action selector="segmentAction:" destination="m8g-1f-zZq" eventType="valueChanged" id="LpY-Jb-b7d"/>
                                                 </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YwG-me-WvS">
@@ -80,7 +80,7 @@
                                                 </segments>
                                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
-                                                    <action selector="segmentAction:" destination="m8g-1f-zZq" eventType="valueChanged" id="sOe-oO-9GU"/>
+                                                    <action selector="segmentAction:" destination="m8g-1f-zZq" eventType="valueChanged" id="iKY-wL-eyS"/>
                                                 </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vdi-02-FOZ">
@@ -95,7 +95,7 @@
                                                 </segments>
                                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
-                                                    <action selector="segmentAction:" destination="m8g-1f-zZq" eventType="valueChanged" id="xLr-YZ-oON"/>
+                                                    <action selector="segmentAction:" destination="m8g-1f-zZq" eventType="valueChanged" id="hoK-k3-xM8"/>
                                                 </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jxp-jB-YEU">
@@ -110,7 +110,7 @@
                                                 </segments>
                                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
-                                                    <action selector="segmentAction:" destination="m8g-1f-zZq" eventType="valueChanged" id="kxB-Ol-ciP"/>
+                                                    <action selector="segmentAction:" destination="m8g-1f-zZq" eventType="valueChanged" id="inI-oJ-i48"/>
                                                 </connections>
                                             </segmentedControl>
                                         </subviews>
@@ -275,9 +275,6 @@
             <objects>
                 <pageViewController storyboardIdentifier="PageVc" autoresizesArchivedViewToFullSize="NO" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="E2J-8Y-hUV" customClass="PageViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="pKP-K3-dUc"/>
-                    <connections>
-                        <segue destination="w4n-b2-fa7" kind="modal" modalPresentationStyle="fullScreen" id="Xol-Ay-JJl"/>
-                    </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehN-ky-OUm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

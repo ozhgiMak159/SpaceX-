@@ -81,7 +81,7 @@ struct Second: Decodable {
     }
 }
 
-// MARK: - API
+// MARK: - Url links from API
 enum Link: String {
     case listRocket = "https://api.spacexdata.com/v4/rockets"
     case rocketLaunches = "https://api.spacexdata.com/v4/launches"
