@@ -13,7 +13,7 @@ class NetworkManager {
     private init() {}
     
     // MARK: - Loading data from API
-    func fetchData<T: Decodable>(dataType: T.Type, url: String,formaterString: String, completion: @escaping(T) -> Void) {
+    func fetchData<T: Decodable>(dataType: T.Type, url: String, formaterString: String, completion: @escaping(T) -> Void) {
         guard let urlString = URL(string: url) else { return }
         
         URLSession.shared.dataTask(with: urlString) { data, _, error in
