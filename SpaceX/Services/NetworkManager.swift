@@ -19,8 +19,7 @@ class NetworkManager {
         URLSession.shared.dataTask(with: urlString) { data, _, error in
             guard let data = data else {
                 print(error?.localizedDescription ?? "No description")
-                return
-            }
+                return }
             do {
                 let jsonDecoder = JSONDecoder()
                 let dateFormater = DateFormatter()

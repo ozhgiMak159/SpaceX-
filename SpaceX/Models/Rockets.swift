@@ -16,7 +16,7 @@ struct ListRockets: Decodable {
     let secondStage: Second?
     let name: String?
     let firstFlight: Date
-    let costPerLaunch: Double // ?
+    let costPerLaunch: Double 
     let flickrImages: [String]?
     
     var costResult: String {
@@ -45,7 +45,6 @@ struct Height: Decodable {
     let meters,feet: Double?
 }
 
-
 struct Diameter: Decodable {
     let meters,feet: Double?
 }
@@ -57,7 +56,6 @@ struct Mass: Decodable {
 struct PayloadWeights: Decodable {
     let kg,lb: Double?
 }
-
 
 struct First: Decodable {
     let engines, burnTimeSec: Int?
