@@ -137,7 +137,7 @@ class MainViewController: UIViewController {
         }
     }
 }
-// MARK: - Protocol Delegate. Прием и отображения численных единиц измерения до конца не реализованы.
+// MARK: - Protocol Delegate. Метод по приему и отображения численных единиц измерения до конца не реализованы.
 extension MainViewController: UpDataSettingsDelegate {
     func setSettingsUnits(_ height: String, _ diameter: String, _ weight: String, _ load: String) {
         unitOfHeight.text = height

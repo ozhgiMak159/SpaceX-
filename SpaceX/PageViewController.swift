@@ -65,10 +65,9 @@ class PageViewController: UIPageViewController {
     
     // MARK: - Navigation
     func dataTransmission() {
-    guard let mainVC = storyboard?.instantiateViewController(withIdentifier: "MainVC") as? MainViewController else { return }
+        guard let mainVC = storyboard?.instantiateViewController(withIdentifier: "MainVC") as? MainViewController else { return }
         mainVC.newArrayMain = self.newArray
     }
-    
 }
 
     // MARK: - UIPageViewControllerDataSource
