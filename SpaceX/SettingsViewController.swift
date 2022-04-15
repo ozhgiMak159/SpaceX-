@@ -30,7 +30,6 @@ class SettingsViewController: UIViewController {
         statesSegmentIndex()
     }
    
-
     private func statesSegmentIndex() {
         segmentHeight.selectedSegmentIndex = 1
         segmentDiametr.selectedSegmentIndex = 1

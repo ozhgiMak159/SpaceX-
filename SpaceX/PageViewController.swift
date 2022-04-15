@@ -12,7 +12,7 @@ import UIKit
 class PageViewController: UIPageViewController {
      
     // MARK: - Private properties
-    private var formatter = Formatters()
+    private let formatter = Formatters()
     private var newArray: [ListRockets] = []
     private let countries = [
         NSLocalizedString("Republic of the Marshall Islands", comment: ""),
