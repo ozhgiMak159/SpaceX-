@@ -22,12 +22,14 @@ class SettingsViewController: UIViewController {
     private var unitDiameter = "ft"
     private var unitWeight = "kg"
     private var unitLoad = "lb"
+    
   
     // MARK: - UIViewController Method
     override func viewDidLoad() {
         super.viewDidLoad()
         statesSegmentIndex()
     }
+   
 
     private func statesSegmentIndex() {
         segmentHeight.selectedSegmentIndex = 1
