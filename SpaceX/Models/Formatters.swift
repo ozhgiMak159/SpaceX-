@@ -1,5 +1,5 @@
 //
-//  DataFormatter.swift
+//  Formatters.swift
 //  SpaceX
 //
 //  Created by Maksim  on 11.04.2022.

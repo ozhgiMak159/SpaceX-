@@ -27,7 +27,6 @@ struct ListRockets: Decodable {
         flickrImages?.randomElement() ?? ""
     }
     
-        
     enum CodingKeys: String, CodingKey {
         case height
         case diameter
