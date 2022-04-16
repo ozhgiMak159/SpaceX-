@@ -12,6 +12,7 @@ class DetailInfoRocketCollectionViewCell: UICollectionViewCell {
     // MARK: - IBOutlet
     @IBOutlet var nameRocket: UILabel!
     @IBOutlet var flightDate: UILabel!
+    
     @IBOutlet var flightResultImage: UIImageView!
     
     // MARK: - Private property

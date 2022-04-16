@@ -14,11 +14,10 @@ class MainViewController: UIViewController {
    
     // MARK: - IBOutlets
     @IBOutlet var pageControllerRocket: UIPageControl!
-    @IBOutlet var scrollViewMain: UIScrollView!
 
     @IBOutlet var imageRocket: UIImageView!
-    @IBOutlet var nameRocket: UILabel!
     
+    @IBOutlet var nameRocket: UILabel!
     @IBOutlet var height: UILabel!
     @IBOutlet var unitOfHeight: UILabel!
     
@@ -46,6 +45,7 @@ class MainViewController: UIViewController {
     // MARK: - Public properties
     var newArrayMain: [ListRockets]!
     var currentOfNumber = 0
+    
     var initImage: UIImage!
     var initNameRocket: String!
     var initHeight: String!
