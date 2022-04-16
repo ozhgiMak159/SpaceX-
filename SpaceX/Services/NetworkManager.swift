@@ -33,7 +33,6 @@ class NetworkManager {
                 print("Error - 🎃")
             }
         }.resume()
-        
     }
     // MARK: - Uploading images from API
     func fetchImage(from url: String?) -> Data? {
