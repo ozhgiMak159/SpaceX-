@@ -764,7 +764,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="tjR-uu-glB" kind="modal" modalPresentationStyle="fullScreen" id="jLP-gm-yO0"/>
+                                                    <segue destination="tjR-uu-glB" kind="modal" identifier="Info" modalPresentationStyle="fullScreen" id="jLP-gm-yO0"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ak-b8-GCe">
