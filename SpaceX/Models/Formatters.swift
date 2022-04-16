@@ -26,5 +26,11 @@ class Formatters {
         
         return ""
     }
+    
+    // MARK: - function for rounding numbers to integers
+    func roundingNumbers(value: Double) -> String {
+        String(format: "%.0f", value)
+    }
+    
 }
 

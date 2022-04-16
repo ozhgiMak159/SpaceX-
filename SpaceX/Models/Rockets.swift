@@ -61,10 +61,6 @@ struct First: Decodable {
     let engines, burnTimeSec: Int?
     let fuelAmountTons: Double?
     
-    var fuelAmountTonsFormatFirst: String {
-        String(format: "%.0f", fuelAmountTons ?? 0.0)
-    }
-
     enum CodingKeys: String, CodingKey {
         case engines
         case fuelAmountTons = "fuel_amount_tons"
@@ -75,10 +71,6 @@ struct First: Decodable {
 struct Second: Decodable {
     let engines, burnTimeSec: Int?
     let fuelAmountTons: Double?
-    
-    var fuelAmountTonsFormatSecond: String {
-        String(format: "%.0f", fuelAmountTons ?? 0.0)
-    }
     
     enum CodingKeys: String, CodingKey {
         case engines

@@ -47,6 +47,8 @@ class PageViewController: UIPageViewController {
         mainVC.newArrayMain = self.newArray
         mainVC.initNameRocket = newArray[index].name ?? "Error: No name"
         mainVC.initFirstLaunch = formatter.stringToDateVc(date: newArray[index].firstFlight)
+        mainVC.initFuelQuantityFirst = formatter.roundingNumbers(value: newArray[index].firstStage?.fuelAmountTons ?? 0)
+        mainVC.initFuelQuantitySecond = formatter.roundingNumbers(value: newArray[index].secondStage?.fuelAmountTons ?? 0)
         mainVC.initCountry = countries[index]
         mainVC.initLaunchCost = newArray[index].costResult
         mainVC.initHeight = String(newArray[index].height?.feet ?? 0.0)
@@ -54,10 +56,8 @@ class PageViewController: UIPageViewController {
         mainVC.initWeight = String(formatter.numberFormatter(newArray[index].mass?.kg ?? 0))
         mainVC.initLoad = String(formatter.numberFormatter(newArray[index].payloadWeights.first?.lb ?? 0.0)) 
         mainVC.initNumberOfEnginesFirst = String(newArray[index].firstStage?.engines ?? 0)
-        mainVC.initFuelQuantityFirst = newArray[index].firstStage?.fuelAmountTonsFormatFirst 
         mainVC.initCombustionTimeFirst = String(newArray[index].firstStage?.burnTimeSec ?? 0)
         mainVC.initNumberOfEnginesSecond = String(newArray[index].secondStage?.engines ?? 0)
-        mainVC.initFuelQuantitySecond = newArray[index].secondStage?.fuelAmountTonsFormatSecond
         mainVC.initCombustionTimeSecond = String(newArray[index].secondStage?.burnTimeSec ?? 0)
         mainVC.currentOfNumber = index
         return mainVC

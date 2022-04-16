@@ -879,7 +879,6 @@
                         <outlet property="numberOfEnginesFirst" destination="h4e-ee-dpe" id="MHY-9P-4Pk"/>
                         <outlet property="numberOfEnginesSecond" destination="uUp-Hb-HgN" id="vTa-Zu-ER4"/>
                         <outlet property="pageControllerRocket" destination="L5I-gR-WFq" id="iF1-F3-e62"/>
-                        <outlet property="scrollViewMain" destination="OaH-PZ-CEC" id="zaJ-Th-Gdp"/>
                         <outlet property="unitOfDiameter" destination="AfF-fK-7LG" id="6Qa-9c-eSw"/>
                         <outlet property="unitOfHeight" destination="daS-Tb-BDn" id="5dj-hw-cF6"/>
                         <outlet property="unitOfLoad" destination="RdM-ze-pSc" id="wTO-1x-9VM"/>
