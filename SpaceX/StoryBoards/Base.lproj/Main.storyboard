@@ -317,6 +317,9 @@
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Первый запуск" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mi-ZY-xQj">
                                                                 <rect key="frame" x="0.0" y="0.0" width="127.5" height="21.5"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="127.5" id="wxF-aB-ijs"/>
+                                                                </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -765,7 +768,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ak-b8-GCe">
-                                                <rect key="frame" x="242" y="51" width="56" height="46"/>
+                                                <rect key="frame" x="248" y="51" width="56" height="46"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="setting"/>
                                                 <connections>
@@ -790,7 +793,7 @@
                                             <constraint firstItem="3Ak-b8-GCe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qQw-Pg-Jkf" secondAttribute="trailing" constant="8" symbolic="YES" id="DnF-EH-AGE"/>
                                             <constraint firstAttribute="trailing" secondItem="ffb-4K-eni" secondAttribute="trailing" id="GET-vu-Nwe"/>
                                             <constraint firstItem="c3k-AI-Wjp" firstAttribute="top" secondItem="G3y-MI-IeP" secondAttribute="bottom" constant="51" id="I1d-Qb-EJf"/>
-                                            <constraint firstAttribute="trailing" secondItem="3Ak-b8-GCe" secondAttribute="trailing" constant="22" id="IGP-vf-krH"/>
+                                            <constraint firstAttribute="trailing" secondItem="3Ak-b8-GCe" secondAttribute="trailing" constant="16" id="IGP-vf-krH"/>
                                             <constraint firstItem="U6H-rO-8kb" firstAttribute="top" secondItem="Qr4-yi-qb1" secondAttribute="bottom" constant="22" id="Ita-WC-NHm"/>
                                             <constraint firstItem="p1i-Hu-Qwd" firstAttribute="top" secondItem="jV2-W8-Fod" secondAttribute="top" constant="474" id="IxT-a4-iad"/>
                                             <constraint firstItem="c3k-AI-Wjp" firstAttribute="centerX" secondItem="Qr4-yi-qb1" secondAttribute="centerX" id="QAQ-Fc-Xs8"/>
