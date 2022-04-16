@@ -25,7 +25,7 @@ class InfoRocketLaunchCollectionViewController: UICollectionViewController {
     }
     
     private func fetchData(_ url: String)  {
-        NetworkManager.shared.fetchData(dataType: [RocketLaunches].self, url: url, formaterString: "yyyy-MM-dd'T'HH:mm:ss.sssZ") { data in
+        NetworkManager.shared.fetchData(dataType: [RocketLaunches].self, url: url, formaterString: StringOld.oldStringRocketLaunches.rawValue) { data in
             self.newArray = data
             self.newArray.sort(by: { $0.dateUtc > $1.dateUtc })
             self.collectionView.reloadData()

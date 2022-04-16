@@ -14,17 +14,11 @@ class PageViewController: UIPageViewController {
     // MARK: - Private properties
     private let formatter = Formatters()
     private var newArray: [ListRockets] = []
-    private let countries = [
-        NSLocalizedString("Republic of the Marshall Islands", comment: ""),
-        NSLocalizedString("United States", comment: ""),
-        NSLocalizedString("United States", comment: ""),
-        NSLocalizedString("United States", comment: "")
-    ]
     
     // MARK: - UIPageViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkManager.shared.fetchData(dataType: [ListRockets].self, url: Link.listRocket.rawValue, formaterString: "yyyy-MM-dd") { data in
+        NetworkManager.shared.fetchData(dataType: [ListRockets].self, url: Link.listRocket.rawValue, formaterString: StringOld.oldStringListRocket.rawValue) { data in
             self.newArray = data
             self.pageViewControllerMethod()
             self.dataTransmission()
@@ -44,13 +38,12 @@ class PageViewController: UIPageViewController {
         guard index < self.newArray.count else { return nil }
         guard let imageData = NetworkManager.shared.fetchImage(from: newArray[index].randomElementImage) else { return nil }
         DispatchQueue.main.async { mainVC.imageRocket.image = UIImage(data: imageData) }
-        mainVC.newArrayMain = self.newArray
         mainVC.initNameRocket = newArray[index].name ?? "Error: No name"
         mainVC.initFirstLaunch = formatter.stringToDateVc(date: newArray[index].firstFlight)
         mainVC.initFuelQuantityFirst = formatter.roundingNumbers(value: newArray[index].firstStage?.fuelAmountTons ?? 0)
         mainVC.initFuelQuantitySecond = formatter.roundingNumbers(value: newArray[index].secondStage?.fuelAmountTons ?? 0)
-        mainVC.initCountry = countries[index]
         mainVC.initLaunchCost = newArray[index].costResult
+        mainVC.initCountry = newArray[index].countries[index]
         mainVC.initHeight = String(newArray[index].height?.feet ?? 0.0)
         mainVC.initDiameter = String(newArray[index].diameter?.feet ?? 0.0)
         mainVC.initWeight = String(formatter.numberFormatter(newArray[index].mass?.kg ?? 0))

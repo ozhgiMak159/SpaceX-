@@ -33,4 +33,10 @@ class Formatters {
     }
     
 }
+// MARK: - Old string formats from API
+enum StringOld: String  {
+    case oldStringListRocket = "yyyy-MM-dd"
+    case oldStringRocketLaunches = "yyyy-MM-dd'T'HH:mm:ss.sssZ"
+}
+
 

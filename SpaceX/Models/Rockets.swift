@@ -18,6 +18,12 @@ struct ListRockets: Decodable {
     let firstFlight: Date
     let costPerLaunch: Double 
     let flickrImages: [String]?
+    let countries = [
+        NSLocalizedString("Republic of the Marshall Islands", comment: ""),
+        NSLocalizedString("United States", comment: ""),
+        NSLocalizedString("United States", comment: ""),
+        NSLocalizedString("United States", comment: "")
+    ]
     
     var costResult: String {
         String(format: "$%.0f млн", costPerLaunch / 1000000)
@@ -27,6 +33,7 @@ struct ListRockets: Decodable {
         flickrImages?.randomElement() ?? ""
     }
     
+   
     enum CodingKeys: String, CodingKey {
         case height
         case diameter
@@ -84,3 +91,4 @@ enum Link: String {
     case listRocket = "https://api.spacexdata.com/v4/rockets"
     case rocketLaunches = "https://api.spacexdata.com/v4/launches"
 }
+
