@@ -18,7 +18,7 @@ struct ListRockets: Decodable {
     let firstFlight: Date
     let costPerLaunch: Double 
     let flickrImages: [String]?
-    let countries = [
+    var countries = [
         NSLocalizedString("Republic of the Marshall Islands", comment: ""),
         NSLocalizedString("United States", comment: ""),
         NSLocalizedString("United States", comment: ""),
@@ -33,7 +33,6 @@ struct ListRockets: Decodable {
         flickrImages?.randomElement() ?? ""
     }
     
-   
     enum CodingKeys: String, CodingKey {
         case height
         case diameter

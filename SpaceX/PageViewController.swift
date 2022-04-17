@@ -14,7 +14,7 @@ class PageViewController: UIPageViewController {
     // MARK: - Private properties
     private let formatter = Formatters()
     private var newArray: [ListRockets] = []
-    
+ 
     // MARK: - UIPageViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
