@@ -36,7 +36,6 @@ struct ListRockets: Decodable {
         ]
     }
     
-   
     enum CodingKeys: String, CodingKey {
         case height
         case diameter
