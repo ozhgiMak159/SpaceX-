@@ -43,8 +43,8 @@ class PageViewController: UIPageViewController {
         mainVC.initFirstLaunch = formatter.stringToDateVc(date: newArray[index].firstFlight)
         mainVC.initFuelQuantityFirst = formatter.roundingNumbers(value: newArray[index].firstStage?.fuelAmountTons ?? 0)
         mainVC.initFuelQuantitySecond = formatter.roundingNumbers(value: newArray[index].secondStage?.fuelAmountTons ?? 0)
-        mainVC.initLaunchCost = newArray[index].costResult
         mainVC.initCountry = countries[index]
+        mainVC.initLaunchCost = newArray[index].costResult
         mainVC.initHeight = String(newArray[index].height?.feet ?? 0.0)
         mainVC.initDiameter = String(newArray[index].diameter?.feet ?? 0.0)
         mainVC.initWeight = String(formatter.numberFormatter(newArray[index].mass?.kg ?? 0))
