@@ -8,7 +8,7 @@
 import Foundation
 
 class Formatters {
-    // MARK: - Date Formatter
+
     func stringToDateVc(date: Date) -> String {
         var stringDate: String
         let dataForm = DateFormatter()
@@ -18,7 +18,7 @@ class Formatters {
         
         return stringDate
     }
-    // MARK: - NumberFormatter
+
     func numberFormatter(_ number: Double) -> String {
         let format = NumberFormatter()
         format.numberStyle = .decimal
@@ -27,13 +27,13 @@ class Formatters {
         return ""
     }
     
-    // MARK: - function for rounding numbers to integers
+   
     func roundingNumbers(value: Double) -> String {
         String(format: "%.0f", value)
     }
     
 }
-// MARK: - Old string formats from API
+
 enum StringOld: String  {
     case oldStringListRocket = "yyyy-MM-dd"
     case oldStringRocketLaunches = "yyyy-MM-dd'T'HH:mm:ss.sssZ"
