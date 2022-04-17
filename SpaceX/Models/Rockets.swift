@@ -88,7 +88,6 @@ struct Second: Decodable {
         case burnTimeSec = "burn_time_sec"
     }
 }
-
 // MARK: - Url links from API
 enum Link: String {
     case listRocket = "https://api.spacexdata.com/v4/rockets"
